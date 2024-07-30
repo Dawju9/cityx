@@ -1,0 +1,3 @@
+-- the fake door works if you scripted on the map or other
+-- player cannot pass the elevator's door
+-- you need to put a fake door to map

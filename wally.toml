@@ -1,0 +1,30 @@
+# cityx wally.toml
+
+[package]
+name = "whitekali/cityx"
+description = "Cityx - The Si'automaticion city 'x' procedural and modual"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+authors = ["Whitekali <Discord: whitekali> <whitekali@aya.studio> <@251838559680593920>"]
+realm = "shared"
+registry = "https://github.com/UpliftGames/wally-index"
+private = true
+
+[dependencies]
+matter = "matter-ecs/matter@0.8.3"
+Roact = "roblox/roact@1.4.0"
+#Promise = "evaera/promise@2.0.1"
+#Promise = "Promise:finally"
+base64 = "reselim/base64@3.0.0"
+signal = "sleitnick/signal@2.0.1"
+trove = "sleitnick/trove@1.3.0"
+promise = "evaera/promise@4.0.0"
+#wally = UpliftGames/wally@0.3.2"
+#wally-package-types = "JohnnyMorganz/wally-package-types@1.1.1" #Replace with correct scope and version
+#rojo = "roblox/rojo@7.2.1"
+[server-dependencies]
+# Add server-specific dependencies if needed
+
+[dev-dependencies]
+# Add dev-specific dependencies if needed
+

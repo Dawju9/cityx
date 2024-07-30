@@ -1,0 +1,1 @@
+script.Parent.Parent.Parent:Destroy()

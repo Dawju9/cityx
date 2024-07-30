@@ -1,0 +1,3 @@
+-- the telepads works if the time is out, the map will disappears
+-- so if player is falling on the worlds, will teleport to elevator but
+-- you need to put a telepads to map
