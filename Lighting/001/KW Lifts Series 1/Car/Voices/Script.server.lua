@@ -1,8 +1,0 @@
-script.Parent.Parent.Platform.ChimeU.Played:Connect(function()
-	wait(2)
-	script.Parent.Up:Play()
-end)
-script.Parent.Parent.Platform.ChimeD.Played:Connect(function()
-	wait(2)
-	script.Parent.Down:Play()
-end)

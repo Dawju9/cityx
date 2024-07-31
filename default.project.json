@@ -1,45 +1,69 @@
 {
-  "name": "project",
+  "name": "cityx",
   "tree": {
     "$className": "DataModel",
     "Lighting": {
-      "$className": "Lighting",
-      "$ignoreUnknownInstances": true,
-      "$path": "src/Lighting"
-    },
-    "ReplicatedFirst": {
-      "$className": "ReplicatedFirst",
-      "$ignoreUnknownInstances": true,
-      "$path": "src/ReplicatedFirst"
+      "$properties": {
+        "Brightness": 2.0,
+        "GlobalShadows": true,
+        "Outlines": false,
+        "Technology": "Voxel",
+        "Ambient": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
     },
     "ReplicatedStorage": {
-      "$className": "ReplicatedStorage",
-      "$ignoreUnknownInstances": true,
-      "$path": "src/ReplicatedStorage"
+      "Common": {
+        "$path": "src/shared"
+      }
     },
     "ServerScriptService": {
-      "$className": "ServerScriptService",
-      "$ignoreUnknownInstances": true,
-      "$path": "src/ServerScriptService"
+      "Server": {
+        "$path": "src/server"
+      }
     },
-    "StarterGui": {
-      "$className": "StarterGui",
-      "$ignoreUnknownInstances": true,
-      "$path": "src/StarterGui"
+    "SoundService": {
+      "$properties": {
+        "RespectFilteringEnabled": true
+      }
     },
     "StarterPlayer": {
-      "$className": "StarterPlayer",
       "StarterPlayerScripts": {
-        "$className": "StarterPlayerScripts",
-        "$ignoreUnknownInstances": true,
-        "$path": "src/StarterPlayer/StarterPlayerScripts"
-      },
-      "$ignoreUnknownInstances": true
+        "Client": {
+          "$path": "src/client"
+        }
+      }
     },
     "Workspace": {
-      "$className": "Workspace",
-      "$ignoreUnknownInstances": true,
-      "$path": "src/Workspace"
+      "Baseplate": {
+        "$className": "Part",
+        "$properties": {
+          "Size": [
+            512.0,
+            20.0,
+            512.0
+          ],
+          "Locked": true,
+          "Color": [
+            0.38823,
+            0.37254,
+            0.38823
+          ],
+          "Position": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "Anchored": true
+        }
+      },
+      "$properties": {
+        "FilteringEnabled": true
+      },
+      "$ignoreUnknownInstances": true
     }
   }
 }
