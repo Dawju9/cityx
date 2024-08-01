@@ -3,17 +3,20 @@
   "tree": {
     "$className": "DataModel",
     "Lighting": {
+      "$className": "Lighting",
       "$properties": {
         "Brightness": 2.0,
-        "GlobalShadows": true,
-        "Outlines": false,
-        "Technology": "Voxel",
         "Ambient": [
           0.0,
           0.0,
           0.0
-        ]
-      }
+        ],
+        "GlobalShadows": true,
+        "Outlines": false,
+        "Technology": "Voxel"
+      }, 
+      "$ignoreUnknownInstances": true,
+      "$path": "src/Lighting"
     },
     "ReplicatedStorage": {
       "Common": {
@@ -38,32 +41,32 @@
       }
     },
     "Workspace": {
+      "$className": "Workspace",
       "Baseplate": {
-        "$className": "Part",
-        "$properties": {
-          "Size": [
-            512.0,
-            20.0,
-            512.0
-          ],
-          "Locked": true,
-          "Color": [
-            0.38823,
-            0.37254,
-            0.38823
-          ],
-          "Position": [
-            0.0,
-            -10.0,
-            0.0
-          ],
-          "Anchored": true
-        }
+        "$className": "Baseplate",
+        "Texture": {
+          "$className": "Texture",
+          "$properties": {
+            "Transparency": 0.8,
+            "Face": "Top",
+            "OffsetStudsV": 0.0,
+            "StudsPerTileU": 8.0,
+            "Texture": "http://www.roblox.com/asset/?id=296812735",
+            "OffsetStudsU": 0.0,
+            "Color3": [
+              0.2,
+              0.0,
+              0.0
+            ],
+            "StudsPerTileV": 8.0
+          },
+          "$ignoreUnknownInstances": true,
+          "$path": "src/Workspace/Baseplate/Texture"
+        },
+      "$path": "src/Workspace/Baseplate"
       },
-      "$properties": {
-        "FilteringEnabled": true
-      },
-      "$ignoreUnknownInstances": true
+      "$ignoreUnknownInstances": true,
+      "$path": "src/Workspace"
     }
   }
 }

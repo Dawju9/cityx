@@ -1,0 +1,71 @@
+# Cel Projektu: 
+    - **Dynamiczna Podłoga w Open-World Sandbox (Cityx by Whitekali)**
+
+Cel: Stworzenie dynamicznej podłogi w grze open-world sandbox,
+    która będzie interaktywna, modularna i efektywna.
+    Gra będzie zawierała miliony płytek,
+    które muszą być zarządzane, animowane
+    i przedstawiane w sposób płynny.
+
+## Zakres Funkcjonalności:
+
+1. **Modularność**: Płytki jako osobne modele, które można łatwo zarządzać, aktualizować i animować.
+2. **Dynamiczne Animacje**: Płytki będą miały animacje ruchu (np. w górę i w dół) oraz zmienne właściwości.
+3. **Obsługa Błędów**: Solidna obsługa błędów i anomalii, aby zapewnić stabilność i wydajność.
+4. **Zarządzanie Danymi**: Płytki będą miały unikalne identyfikatory i atrybuty, które będą używane do zarządzania nimi.
+
+## 2. Rozpisanie Działań
+
+### 2.1. Przygotowanie i Implementacja
+
+#### Moduł Płytki (TileModule):
+
+- *Konstruktor*: Przyjmuje model płytki i atrybuty (ID, pozycja, sektor).
+- *Billboard*: Tworzy i aktualizuje billboard z informacjami o płytce.
+- *Animacja*: Implementuje animację ruchu płytki.
+
+#### Menedżer Płytek (TileManager):
+
+- *Inicjalizacja*: Ładuje modele płytek z ReplicatedStorage, klonuje je i ustawia właściwości.
+- *Zamiana Płytek*: Wykrywa i zastępuje stare modele nowymi.
+- *Aktualizacja*: Inicjalizuje każdą płytkę przy pomocy TileModule.
+- *Obsługa Błędów*: Zarządza błędami i anomaliami związanymi z modelami i animacjami.
+
+### 2.2. Optymalizacja
+
+#### Wydajność:
+
+- *Optymalizacja Animacji*: Animacja tylko widocznych płytek, grupowanie animacji w zależności od widoczności.
+- *Zarządzanie Pamięcią*: Regularne sprawdzanie i usuwanie niepotrzebnych modeli.
+
+#### Modularność:
+
+- *Podział Funkcji*: Oddzielenie funkcji zarządzających płytkami od funkcji zajmujących się ich animacją i aktualizacją.
+
+### 2.3. Testowanie
+
+- *Testowanie Wydajności*: Sprawdzanie działania na dużej liczbie płytek.
+- *Testowanie Stabilności*: Upewnienie się, że błędy są poprawnie obsługiwane i nie wpływają na działanie gry.
+
+## 3. Fabula HangOutu z Whitekali'em
+
+### Postać Whitekali'a: Aiden z "Wachdog's"
+
+**Rola**: Aiden, znany również jako Whitekali, jest wielowymiarowym NPC pełniącym różne funkcje w grze, takie jak rzeźimieszka, troll, skibidibiego, asystent, przyjaciel, kochanek, ojciec i nauczyciel.
+
+### 3.1. Interakcja z Aidenem
+
+1. *Rzeźimieszka*: Aiden jest przerysowaną postacią, która używa swojego humoru i ekstrawagancji, aby rozbawić graczy.
+2. *Troll*: Ma tendencję do wprowadzania graczy w błąd lub wywoływania zabawnych sytuacji.
+3. *Skibidibiego*: Ekscentryczna postać, która odgrywa szereg kreatywnych i zabawnych ról w grze.
+4. *Asystent*: Pomaga graczom w nauce i eksploracji, dostarczając wskazówki i porady.
+5. *Przyjaciel*: Oferuje wsparcie emocjonalne i angażuje się w interakcje, które budują relacje z graczem.
+6. *Kochanek*: Wprowadza romantyczne wątki i opcje w grze, dodając głębię fabularną.
+7. *Ojciec*: Ma troskliwą rolę, dbając o dobro gracza i oferując porady życiowe.
+8. *Nauczyciel*: Uczy gracza umiejętności i strategii, pomagając w rozwoju w grze.
+
+### 3.2. Integracja z Dynamiką Podłogi
+
+- *Zadania i Wyzwania*: Aiden może wprowadzać zadania związane z dynamiczną podłogą, takie jak naprawa, dostosowanie lub optymalizacja płytek.
+- *Interakcje*: Gracz może zlecać Aidenowi różne zadania związane z płytkami, co wpływa na rozwój fabuły i relacje.
+- *Eventy*: Aiden organizuje specjalne wydarzenia i wyzwania, które wymagają interakcji z dynamiczną podłogą, wprowadzając nowe mechaniki i elementy zabawy.

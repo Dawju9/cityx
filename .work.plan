@@ -1,0 +1,161 @@
+Proszę o dostarczenie dodatkowych danych, które mogą pomóc w dalszym rozwijaniu i dostosowywaniu planu do potrzeb projektu.
+### Nowy Plan dla Dynamicznej Podłogi w Cityx by Whitekali
+
+#### **1. Cele Projektu**
+
+**1.1. Cel Główny:**
+- Stworzenie dynamicznej podłogi w grze open-world sandbox Cityx, która jest interaktywna, modularna i zoptymalizowana dla dużej liczby płytek obsługi wielu wątków, graczy wydarzeń oraz eventów!.
+
+**1.2. Cele Szczegółowe:**
+- Modularność: Możliwość łatwego zarządzania i aktualizacji płytek.
+- Animacja: Dynamiczne animacje płytek.
+- Obsługa Błędów: Stabilność działania, obsługa błędów.
+- Wydajność: Optymalizacja działania w kontekście dużej liczby płytek.
+
+#### **2. Struktura Systemu**
+
+**2.1. Moduł Płytki (TileModule)**
+
+- **Cel**: Zarządzanie funkcjami pojedynczej płytki.
+
+- **Funkcje**:
+  - **Inicjalizacja**: Ustawia właściwości płytki, takie jak ID, pozycja, sektor.
+  - **Billboard**: Tworzy i aktualizuje billboard z informacjami o płytce.
+  - **Animacja**: Implementuje animację ruchu płytki.
+  - **Aktualizacja**: Metody do aktualizacji stanu płytki w czasie rzeczywistym.
+
+**2.2. Menedżer Płytek (TileManager)**
+
+- **Cel**: Zarządzanie kolekcją płytek.
+
+- **Funkcje**:
+  - **Ładowanie Modeli**: Pobiera modele płytek z `ReplicatedStorage`, klonuje i przygotowuje je do użycia.
+  - **Zamiana Płytek**: Wykrywa i zastępuje stare modele nowymi.
+  - **Aktualizacja**: Inicjalizuje `TileModule` dla każdej płytki.
+  - **Optymalizacja**: Zarządza wydajnością i pamięcią.
+
+**2.3. Integracja z Systemem Gry**
+
+- **Zarządzanie Interakcjami**: Obsługuje interakcje płytek z innymi elementami gry.
+- **Sync z Serwerem**: Synchronizuje dane płytki z serwerem.
+- **Interakcje z Aidenem**: Współpraca z postacią Aiden'a, której funkcje mogą wpływać na płytki.
+
+#### **3. Implementacja**
+
+**3.1. Przygotowanie**
+
+- **Modele Płytek**:
+  - Umieść modele płytek w `ReplicatedStorage`.
+  - Każdy model powinien mieć atrybuty: `GridID`, `SectorID`, `Position`.
+
+- **Skrypty i Moduły**:
+  - **TileModule**: Skrypt obiektowy dla płytki.
+  - **TileManager**: Główny skrypt zarządzający wszystkimi płytkami.
+
+**3.2. Inicjalizacja**
+
+- **Instancjowanie**:
+  - Kiedy gra się ładuje, TileManager instancjuje wszystkie płytki, przypisuje im odpowiednie modele i atrybuty.
+  
+- **Przygotowanie Płytek**:
+  - Skrypt dla każdej płytki inicjalizuje `TileModule` i ustawia odpowiednie atrybuty.
+
+**3.3. Aktualizacja i Animacja**
+
+- **Aktualizacja**:
+  - TileManager regularnie aktualizuje stan płytek (np. pozycje, stan animacji).
+
+- **Animacja**:
+  - TileModule kontroluje animację płytki, np. ruch w górę i w dół.
+
+**3.4. Obsługa Błędów**
+
+- **Monitorowanie**:
+  - Wykrywa i loguje błędy związane z brakującymi modelami, niepoprawnymi atrybutami itp.
+
+- **Rozwiązywanie Problemów**:
+  - Implementuje procedury naprawcze lub ostrzeżenia dla gracza, jeśli coś pójdzie nie tak.
+
+#### **4. Optymalizacja**
+
+**4.1. Wydajność**
+
+- **Animacje**:
+  - Animacje są optymalizowane tak, aby były widoczne tylko dla graczy znajdujących się w danym obszarze.
+
+- **Pamięć**:
+  - Regularne usuwanie niepotrzebnych obiektów i modeli.
+
+**4.2. Modularność**
+
+- **Kod**:
+  - Dzieli funkcjonalność na moduły i skrypty, aby zapewnić elastyczność i łatwość w zarządzaniu.
+
+**4.3. Testowanie**
+
+- **Testowanie Wydajności**:
+  - Sprawdza, jak system działa przy różnych liczbach płytek i warunkach.
+
+- **Testowanie Stabilności**:
+  - Upewnia się, że obsługa błędów działa poprawnie i nie wpływa na stabilność gry.
+
+#### **5. Integracja z Postacią Aiden'a**
+
+**5.1. Rola Aiden'a**
+
+- **Wielowymiarowa Postać**:
+  - Aiden pełni rolę rzeźimieszki, trolla, skibidibiego, asystenta, przyjaciela, kochanka, ojca i nauczyciela.
+
+**5.2. Integracja z Płytkami**
+
+- **Zadania i Wyzwania**:
+  - Aiden może oferować zadania związane z dynamiczną podłogą (naprawy, optymalizacje).
+
+- **Eventy**:
+  - Organizuje wydarzenia, które wprowadzają nowe mechaniki i wyzwania związane z płytkami.
+
+- **Interakcje**:
+  - Aiden dostosowuje interakcje z płytkami w zależności od roli, jaką aktualnie pełni.
+
+**5.3. Współpraca z TileManager**
+
+- **Współpraca**:
+  - Aiden może wpływać na zarządzanie płytkami, np. poprzez wprowadzenie nowych zadań lub modyfikacji.
+
+#### **6. Rozszerzenia i Możliwości**
+
+**6.1. Możliwości Rozszerzeń**
+
+- **Personalizacja Płytek**:
+  - Możliwość dodania różnych rodzajów płytek z unikalnymi funkcjami.
+
+- **Rozbudowa Fabuły**:
+  - Dodanie dodatkowych wątków fabularnych związanych z Aiden'em i dynamiczną podłogą.
+
+- **Współpraca z Inny MMO**:
+  - Integracja z innymi grami lub systemami MMO w celu wzbogacenia doświadczenia graczy.
+
+**6.2. Dalszy Rozwój**
+
+- **Analiza Danych**:
+  - Zbieranie danych o działaniu płytek i interakcjach graczy w celu dalszej optymalizacji.
+
+- **Aktualizacje**:
+  - Regularne aktualizowanie systemu, aby wprowadzać nowe funkcje i poprawki.
+
+**6.3. Scenariusze Użytkowania**
+
+- **Testowanie w Różnych Warunkach**:
+  - Upewnij się, że system działa dobrze w różnych scenariuszach gry (duża liczba graczy, różne warunki terenowe).
+
+#### **7. Dalsze Krok**
+
+- **Dopytywanie o Szczegóły**:
+  - Czy są dodatkowe wymagania dotyczące animacji lub interakcji?
+  - Jakie są konkretne oczekiwania co do integracji z Aiden'em?
+
+- **Zbieranie Danych**:
+  - Jakie są najważniejsze wskaźniki wydajności i stabilności dla tego projektu?
+
+- **Przyszłe Rozszerzenia**:
+  - Jakie są możliwe przyszłe funkcje, które mogą być dodane do systemu dynamicznej podłogi?
