@@ -1,3 +1,379 @@
+-- Moduł ładowania modułów
+local ModuleLoader = require("ModuleLoader")
+
+-- Główna pętla gry
+local function gameLoop()
+  while true do
+    -- Obsługa graczy
+    -- Obsługa środowiska
+    -- Obsługa czasu
+    -- Wywoływanie anomalii i zdarzeń
+    -- Zapytania dla graczy
+    -- Poruszanie się po świecie gry
+    -- Logika SI Miastox/Cityx
+    wait(1/30) -- Aktualizacja 30 razy na sekundę
+  end
+end
+
+-- Inicjalizacja gry
+local function initGame()
+  -- Ładowanie modułów
+  ModuleLoader.loadModules()
+  -- Inicjalizacja graczy
+  -- Inicjalizacja środowiska
+  -- Inicjalizacja SI Miastox/Cityx
+end
+
+-- Start gry
+initGame()
+gameLoop()
+
+
+
+
+
+
+
+
+
+
+
+
+**1.2. Cele Szczegółowe:**
+- Modularność: Możliwość łatwego zarządzania i aktualizacji płytek.
+- Animacja: Dynamiczne animacje płytek.
+- Obsługa Błędów: Stabilność działania, obsługa błędów.
+- Wydajność: Optymalizacja działania w kontekście dużej liczby płytek.
+
+#### **2. Struktura Systemu**
+
+**2.1. Moduł Płytki (TileModule)**
+
+- **Cel**: Zarządzanie funkcjami pojedynczej płytki.
+
+- **Funkcje**:
+  - **Inicjalizacja**: Ustawia właściwości płytki, takie jak ID, pozycja, sektor.
+  - **Billboard**: Tworzy i aktualizuje billboard z informacjami o płytce.
+  - **Animacja**: Implementuje animację ruchu płytki.
+  - **Aktualizacja**: Metody do aktualizacji stanu płytki w czasie rzeczywistym.
+
+**2.2. Menedżer Płytek (TileManager)**
+
+- **Cel**: Zarządzanie kolekcją płytek.
+
+- **Funkcje**:
+  - **Ładowanie Modeli**: Pobiera modele płytek z `ReplicatedStorage`, klonuje i przygotowuje je do użycia.
+  - **Zamiana Płytek**: Wykrywa i zastępuje stare modele nowymi.
+  - **Aktualizacja**: Inicjalizuje `TileModule` dla każdej płytki.
+  - **Optymalizacja**: Zarządza wydajnością i pamięcią.
+
+**2.3. Integracja z Systemem Gry**
+
+- **Zarządzanie Interakcjami**: Obsługuje interakcje płytek z innymi elementami gry.
+- **Sync z Serwerem**: Synchronizuje dane płytki z serwerem.
+- **Interakcje z Aidenem**: Współpraca z postacią Aiden'a, której funkcje mogą wpływać na płytki.
+
+#### **3. Implementacja**
+
+**3.1. Przygotowanie**
+
+- **Modele Płytek**:
+  - Umieść modele płytek w `ReplicatedStorage`.
+  - Każdy model powinien mieć atrybuty: `GridID`, `SectorID`, `Position`.
+
+- **Skrypty i Moduły**:
+  - **TileModule**: Skrypt obiektowy dla płytki.
+  - **TileManager**: Główny skrypt zarządzający wszystkimi płytkami.
+
+**3.2. Inicjalizacja**
+
+- **Instancjowanie**:
+  - Kiedy gra się ładuje, TileManager instancjuje wszystkie płytki, przypisuje im odpowiednie modele i atrybuty.
+  
+- **Przygotowanie Płytek**:
+  - Skrypt dla każdej płytki inicjalizuje `TileModule` i ustawia odpowiednie atrybuty.
+
+**3.3. Aktualizacja i Animacja**
+
+- **Aktualizacja**:
+  - TileManager regularnie aktualizuje stan płytek (np. pozycje, stan animacji).
+
+- **Animacja**:
+  - TileModule kontroluje animację płytki, np. ruch w górę i w dół.
+
+**3.4. Obsługa Błędów**
+
+- **Monitorowanie**:
+  - Wykrywa i loguje błędy związane z brakującymi modelami, niepoprawnymi atrybutami itp.
+
+- **Rozwiązywanie Problemów**:
+  - Implementuje procedury naprawcze lub ostrzeżenia dla gracza, jeśli coś pójdzie nie tak.
+
+#### **4. Optymalizacja**
+
+**4.1. Wydajność**
+
+- **Animacje**:
+  - Animacje są optymalizowane tak, aby były widoczne tylko dla graczy znajdujących się w danym obszarze.
+
+- **Pamięć**:
+  - Regularne usuwanie niepotrzebnych obiektów i modeli.
+
+**4.2. Modularność**
+
+- **Kod**:
+  - Dzieli funkcjonalność na moduły i skrypty, aby zapewnić elastyczność i łatwość w zarządzaniu.
+
+**4.3. Testowanie**
+
+- **Testowanie Wydajności**:
+  - Sprawdza, jak system działa przy różnych liczbach płytek i warunkach.
+
+- **Testowanie Stabilności**:
+  - Upewnia się, że obsługa błędów działa poprawnie i nie wpływa na stabilność gry.
+
+#### **5. Integracja z Postacią Aiden'a**
+
+**5.1. Rola Aiden'a**
+
+- **Wielowymiarowa Postać**:
+  - Aiden pełni rolę rzeźimieszki, trolla, skibidibiego, asystenta, przyjaciela, kochanka, ojca i nauczyciela.
+
+**5.2. Integracja z Płytkami**
+
+- **Zadania i Wyzwania**:
+  - Aiden może oferować zadania związane z dynamiczną podłogą (naprawy, optymalizacje).
+
+- **Eventy**:
+  - Organizuje wydarzenia, które wprowadzają nowe mechaniki i wyzwania związane z płytkami.
+
+- **Interakcje**:
+  - Aiden dostosowuje interakcje z płytkami w zależności od roli, jaką aktualnie pełni.
+
+**5.3. Współpraca z TileManager**
+
+- **Współpraca**:
+  - Aiden może wpływać na zarządzanie płytkami, np. poprzez wprowadzenie nowych zadań lub modyfikacji.
+
+#### **6. Rozszerzenia i Możliwości**
+
+**6.1. Możliwości Rozszerzeń**
+
+- **Personalizacja Płytek**:
+  - Możliwość dodania różnych rodzajów płytek z unikalnymi funkcjami.
+
+- **Rozbudowa Fabuły**:
+  - Dodanie dodatkowych wątków fabularnych związanych z Aiden'em i dynamiczną podłogą.
+
+- **Współpraca z Inny MMO**:
+  - Integracja z innymi grami lub systemami MMO w celu wzbogacenia doświadczenia graczy.
+
+**6.2. Dalszy Rozwój**
+
+- **Analiza Danych**:
+  - Zbieranie danych o działaniu płytek i interakcjach graczy w celu dalszej optymalizacji.
+
+- **Aktualizacje**:
+  - Regularne aktualizowanie systemu, aby wprowadzać nowe funkcje i poprawki.
+
+**6.3. Scenariusze Użytkowania**
+
+- **Testowanie w Różnych Warunkach**:
+  - Upewnij się, że system działa dobrze w różnych scenariuszach gry (duża liczba graczy, różne warunki terenowe).
+
+#### **7. Dalsze Krok**
+
+- **Dopytywanie o Szczegóły**:
+  - Czy są dodatkowe wymagania dotyczące animacji lub interakcji?
+  - Jakie są konkretne oczekiwania co do integracji z Aiden'em?
+
+- **Zbieranie Danych**:
+  - Jakie są najważniejsze wskaźniki wydajności i stabilności dla tego projektu?
+
+- **Przyszłe Rozszerzenia**:
+  - Jakie są możliwe przyszłe funkcje, które mogą być dodane do systemu dynamicznej podłogi?
+
+Aby poprawić czytelność Twojego kodu i zachować jego wartość, mogę zorganizować go w bardziej strukturalny sposób. Poniżej znajdziesz zaktualizowany kod w Markdown, który lepiej organizuje sekcje oraz komentarze:
+
+```markdown
+# Cityx Game Script
+
+## Wprowadzenie
+Kod zawiera logikę gry dla projektu Cityx, w tym zarządzanie modułami, logikę gry, oraz pętlę gry. Poniżej znajduje się szczegółowy opis poszczególnych komponentów i funkcji.
+
+## Logika Gry
+
+```lua
+--[[
+    Main logic
+    Game logic
+    Ether logic
+]]--
+
+-- Wydruk powitalny
+print("Hello Cityx, the server!")
+
+--[[ 
+    #####| Cityx by "White"  |#####
+    ##|
+    ##|  Game Design Document   
+    ##|  :List active modules: 
+    ##|   - Main Module ['ModuleLoader'] [Nie wprowadzono]
+    ##|   - Game Module [Nie wprowadzono]
+    ##|   - Module Loader [Nie wprowadzono]
+    ##|   - Tile Module ['TileModule'] [Nie wprowadzono]
+    ##|   - Tile Manager ['TileManager'] [Nie wprowadzono]
+    ##|   - Tile Loader [Nie wprowadzono]
+    ##|  :END of 'List': 
+    ##|  :List deactivated modules:
+    ##|   - Main Module [Nie wprowadzono]
+    ##|   - Game Module [Nie wprowadzono]
+    ##|   - Module Loader [Nie wprowadzono]
+    ##|  :END of 'List':
+    ##|  :Game functions:
+    ##|   - initGame() [Nie wprowadzono]
+    ##|   - startGame() [Nie wprowadzono]
+    ##|   - updateGame() [Nie wprowadzono]
+    ##|   - stopGame() [Nie wprowadzono] 
+    ##|   - pauseGame() [Nie wprowadzono]
+    ##|   - resumeGame() [Nie wprowadzono]
+    ##|   - saveGame() [Nie wprowadzono]
+    ##|   - loadGame() [Nie wprowadzono]
+    ##|   - exitGame() [Nie wprowadzono]
+    ##|   - restartGame() [Nie wprowadzono]
+    ##|   - endGame() [Nie wprowadzono]
+    ##|   - winGame() [Nie wprowadzono]
+    ##|   - loseGame() [Nie wprowadzono]
+    ##|  :END of 'List':
+    ##|
+    #####| Cityx by "White"  |#####
+]]--
+
+-- Moduł ładowania modułów
+local ModuleLoader = require(script.Parent.ModuleLoader)
+
+-- Inicjalizacja gry
+local function initGame()
+    -- Ładowanie modułów
+    ModuleLoader.loadModules()
+    -- Inicjalizacja graczy
+    -- Inicjalizacja środowiska
+    -- Inicjalizacja SI Miastox/Cityx
+end
+
+-- Główna pętla gry
+local function gameLoop()
+    while true do
+        -- Obsługa graczy
+        -- Obsługa środowiska
+        -- Obsługa czasu
+        -- Wywoływanie anomalii i zdarzeń
+        -- Zapytania dla graczy
+        -- Poruszanie się po świecie gry
+        -- Logika SI Miastox/Cityx
+        wait(1/30) -- Aktualizacja 30 razy na sekundę
+    end
+end
+
+-- Start gry
+initGame()
+gameLoop()
+```
+
+## Opis Modułów
+
+### 1. Moduł Ładowania (ModuleLoader)
+- **Cel:** Wczytuje i inicjalizuje wszystkie moduły gry.
+- **Kod:**
+    ```python
+    def loadModules(module_paths):
+        modules = {}
+        for path in module_paths:
+            module_name = path.split('/')[-1]
+            module = __import__(module_name)
+            modules[module_name] = module
+        return modules
+    ```
+
+### 2. Moduł Płytki (TileModule)
+- **initializeTile:** Ustawia właściwości płytki.
+- **createBillboard:** Tworzy i aktualizuje billboard z informacjami o płytce.
+- **animateTile:** Implementuje animację ruchu płytki.
+- **updateTile:** Aktualizuje stan płytki w czasie rzeczywistym.
+  
+    ```python
+    def initializeTile(tile, id, position):
+        tile.id = id
+        tile.position = position
+        tile.state = 'inactive'
+    
+    def createBillboard(tile, id, position):
+        billboard = BillboardGui()
+        billboard.text = f"Tile ID: {id}"
+        billboard.position = position
+        tile.billboard = billboard
+        animateTile(tile)
+    
+    def animateTile(tile):
+        while True:
+            tile.position.y += math.sin(time.time()) * tileSize
+            time.sleep(animationDuration / 2)
+    
+    def updateTile(tile):
+        # Update tile state, check interactions, etc.
+        pass
+    ```
+
+### 3. Menedżer Płytek (TileManager)
+- **loadTileModels:** Pobiera modele płytek, klonuje i przygotowuje je do użycia.
+- **replaceOldTiles:** Wykrywa i zastępuje stare modele nowymi.
+- **initializeTileModules:** Inicjalizuje TileModule dla każdej płytki.
+- **optimizePerformance:** Zarządza wydajnością i pamięcią.
+
+    ```python
+    def loadTileModels(model_paths):
+        clones = []
+        for path in model_paths:
+            model = loadModel(path)
+            clone = model.clone()
+            clones.append(clone)
+        return clones
+    
+    def replaceOldTiles(old_tiles, new_tiles):
+        for old_tile, new_tile in zip(old_tiles, new_tiles):
+            destroyTile(old_tile)
+            placeTile(new_tile)
+    
+    def initializeTileModules(tiles):
+        for tile in tiles:
+            initializeTile(tile, tile.id, tile.position)
+            createBillboard(tile, tile.id, tile.position)
+            startTileAnimation(tile)
+    
+    def optimizePerformance():
+        # Implement memory management, object pooling, etc.
+        pass
+    ```
+
+### 4. Rozszerzenia i Możliwości
+- **personalizeTiles:** Dodanie różnych rodzajów płytek.
+- **expandStoryline:** Tworzenie dodatkowych wątków fabularnych.
+- **integrateWithMMO:** Planowanie integracji z innymi systemami MMO.
+- **collectData:** Implementacja systemu zbierania danych.
+- **scheduleUpdates:** Planowanie regularnych aktualizacji.
+
+### 5. Testowanie i Wdrożenie
+- **runTests:** Testowanie w różnych warunkach.
+- **collectFeedback:** Zbieranie opinii graczy.
+- **continuousImprovement:** Planowanie przyszłych rozszerzeń.
+
+### 6. Dokumentacja i Wsparcie
+- **createTechnicalDocumentation:** Przygotowanie dokumentacji technicznej.
+- **createPlayerGuides:** Instrukcje dla graczy.
+- **implementSupportSystem:** System wsparcia klienta.
+
+To podejście powinno pomóc w lepszej organizacji i czytelności kodu, zachowując jednocześnie jego funkcjonalność i przejrzystość.
+
 **Cel:** Zaimplementuj pełny plan funkcjonowania dynamicznej podłogi w grze open-world sandbox Cityx by Whitekali oraz fabułę HangOutu z postacią Aiden'a.
 
 1. **Dynamiczna Podłoga:**
@@ -121,6 +497,115 @@
 5. **Optymalizacja i testowanie:**
    - Zaimplementuj mechanizmy optymalizacji animacji i zarządzania pamięcią w odpowiednich modułach.
    - Zaplanuj testowanie wydajności i stabilności kodu.
+
+
+
+
+
+
+Certainly! Here’s a simplified summary of the functions, variables, and dependencies from your code, along with your ideas in Markdown format:
+
+### Summary of Functions, Variables, and Dependencies
+
+#### **Functions:**
+1. **`createBillboard(part, id, position)`**
+   - **Purpose:** Creates a BillboardGui with model information on a part.
+   - **Dependencies:** `Instance.new("BillboardGui")`, `Instance.new("TextLabel")`
+
+2. **`animatePart(part)`**
+   - **Purpose:** Animates the movement of a part with a sinusoidal motion.
+   - **Dependencies:** `math.sin()`, `wait()`
+
+3. **`onModelTouched(model)`**
+   - **Purpose:** Handles the animation of parts when touched by a player.
+   - **Dependencies:** `part:GetTouchingParts()`, `Instance.new("BoolValue")`, `spawn()`
+
+4. **`addScriptToModel(model)`**
+   - **Purpose:** Adds a custom script to a cloned model.
+   - **Dependencies:** `Instance.new("Script")`
+
+#### **Variables:**
+1. **`floorFolder`**
+   - **Purpose:** Folder containing the original floor models or tiles.
+   - **Dependencies:** Set to `workspace.Additional.MaP__.HangOut.floor` or `script.Parent`.
+
+2. **`cloneFolder`**
+   - **Purpose:** Folder for storing cloned models or tiles.
+   - **Dependencies:** New folder created in `workspace`.
+
+3. **`tileSize`**
+   - **Purpose:** Height of animation in units (e.g., `0.45`).
+
+4. **`animationDuration`**
+   - **Purpose:** Duration of one animation cycle (e.g., `0.5` seconds).
+
+5. **`heightThreshold`**
+   - **Purpose:** Height difference to trigger animation (e.g., `2` units).
+
+6. **`EtherTime`**
+   - **Purpose:** Represents the complete time for Ether with specific constraints and conversions to `TimeCoin` values.
+
+#### **Dependencies:**
+- **`Instance.new()`**: For creating new Roblox instances.
+- **`Vector3.new()`**: For creating position vectors.
+- **`math.sin()`**: For animation calculations.
+- **`wait()`**: For pausing execution.
+- **`workspace`**: Roblox Workspace service.
+
+---
+
+### To-Do List in Markdown:
+
+```markdown
+# To-Do List
+
+## 1. **DiscordHook**
+   - Implement Discord webhook functionality for notifications.
+
+## 2. **RobloxHook**
+   - Integrate Roblox-specific hooks for server communication.
+
+## 3. **WebappHOOK**
+   - Set up web application hooks for external interactions.
+
+## 4. **PaEDirector**
+   - Develop and integrate the PaE Director system for game management.
+
+## 5. **PartManager**
+   - Create or refine the part management system for handling game objects.
+
+## 6. **GameLogic**
+   - Design and implement core game logic for gameplay mechanics.
+
+## 7. **MainLogic**
+   - Develop the main logic of the game, coordinating between different systems.
+
+## 8. **Disaster**
+   - Implement disaster or event handling features within the game.
+
+## 9. **EtherTime**
+   - Calculate and display EtherTime values with constraints.
+   - Ensure accurate conversion to `TimeCoin` values.
+
+## 10. **Cleanup**
+   - Review and clean up code to ensure optimal performance.
+
+## 11. **Analyzing Game Information**
+   - Add optional print statements for debugging and game information updates.
+```
+
+This summary and to-do list should help you keep track of your development process and ensure that all essential components are addressed. Let me know if you need further assistance or additional details!
+
+
+
+
+
+
+
+
+
+
+
 
 Cityx by Whitekali, uwzględniająca dodatkowe funkcje i funkcjonalności:
 

@@ -1,16 +1,19 @@
+##Instrukcje
+#- Modularność: Możliwość łatwego zarządzania i aktualizacji kodu.
+#- Animacja: Dynamiczne animacje.
+#- Obsługa Błędów: Stabilność działania, obsługa błędów.
+#- Wydajność: Optymalizacja działania w kontekście dużej liczby zdarzeń, wątków.
+###
+
 Proszę o dostarczenie dodatkowych danych, które mogą pomóc w dalszym rozwijaniu i dostosowywaniu planu do potrzeb projektu.
-### Nowy Plan dla Dynamicznej Podłogi w Cityx by Whitekali
+### Plan dla Cityx by Whitekali
 
 #### **1. Cele Projektu**
 
 **1.1. Cel Główny:**
-- Stworzenie dynamicznej podłogi w grze open-world sandbox Cityx, która jest interaktywna, modularna i zoptymalizowana dla dużej liczby płytek obsługi wielu wątków, graczy wydarzeń oraz eventów!.
+- Stworzenie dynamicznego open-world sandbox 'Cityx', gra która jest interaktywną, modularną oraz zoptymalizowaną integralną częscią dużego systemu automatyzacji oraz możliwości obsługi dla dużej liczby zdarzeń i obsługi wielu wątków, graczy wydarzeń oraz eventów!.
 
-**1.2. Cele Szczegółowe:**
-- Modularność: Możliwość łatwego zarządzania i aktualizacji płytek.
-- Animacja: Dynamiczne animacje płytek.
-- Obsługa Błędów: Stabilność działania, obsługa błędów.
-- Wydajność: Optymalizacja działania w kontekście dużej liczby płytek.
+
 
 #### **2. Struktura Systemu**
 

@@ -1,5 +1,5 @@
-local fs = require(1)("@lune/fs")
-local roblox = require(1)("@lune/roblox") 
+local fs = ('@lune/fs')
+local roblox = ('@lune/roblox') 
 -- Reading a place file
 local placeFile = fs.readFile("cityx.rbxl")
 local game = roblox.deserializePlace(placeFile)

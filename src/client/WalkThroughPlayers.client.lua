@@ -1,5 +1,4 @@
-local player = game.Players.LocalPlayer
-game:GetService("RunService").Stepped:connect(function()
+local _player = game.Players.LocalPlayergame:GetService("RunService").Stepped:connect(function()
 	for _, player in pairs(game.Players:GetPlayers()) do
 		if player ~= game.Players.LocalPlayer then
 			local c = player.Character
