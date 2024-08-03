@@ -1,3 +1,144 @@
+### Analiza i Planowanie Projektu CityX
+
+Projekt **CityX** ma złożoną strukturę z licznymi modułami oraz zróżnicowanymi narzędziami i środowiskami. Poniżej przedstawiam szczegółową analizę oraz różne warianty podejścia do realizacji projektu, bazując na dostarczonych informacjach.
+
+---
+
+### **1. Główne Cechy Projektu**
+
+**Cel**: Stworzenie zaawansowanego środowiska dla projektu Roblox, z integracją różnych technologii, automatyzacją procesów CI/CD, zarządzaniem modułami, testowaniem i analizą danych.
+
+**Moduły**:
+
+- **Moduł Gry**: Obejmuje logikę gry, skrypty i mechaniki.
+- **Moduł Administracyjny**: Narzędzia do zarządzania i monitorowania.
+- **Moduł Analizy**: Testowanie, analiza kodu, generowanie raportów.
+
+**Frameworki i Narzędzia**:
+
+- **Lune**: Środowisko Lua dla Roblox, z integracją z Visual Studio Code.
+- **Go**: Do obsługi części backendowych i workflow.
+- **Docker**: Konteneryzacja dla różnych narzędzi i środowisk.
+- **GitHub Actions**: Automatyzacja procesów CI/CD.
+- **Firebase**: Do przechowywania danych, autoryzacji, i analityki.
+- **Roblox API**: Do integracji z platformą Roblox.
+- **Discord API**: Do powiadomień i komunikacji.
+
+### **2. Specyfikacja Workflow**
+
+#### **2.1. Workflow CI/CD**
+
+- **Cel**: Automatyzacja budowy, testowania i wdrażania kodu.
+- **Zadania**:
+  - **Budowa**: Kompilacja kodu Go, instalacja Luvit.
+  - **Testowanie**: Uruchamianie testów jednostkowych w Go i testów skryptów Lua.
+  - **Wdrażanie**: Automatyczne wdrażanie na serwery produkcyjne.
+
+#### **2.2. Workflow Dokumentacji**
+
+- **Cel**: Utrzymanie aktualnych dokumentów projektu.
+- **Zadania**:
+  - **Aktualizacja README**: Wpisy o funkcjonalności, instalacji i używaniu modułów.
+  - **Changelog**: Śledzenie zmian i aktualizacji w projekcie.
+  - **Notatki prawne**: Licencje i noty prawne.
+
+#### **2.3. Workflow Analizy**
+
+- **Cel**: Analiza danych i generowanie raportów.
+- **Zadania**:
+  - **Testy i Analizy**: Automatyczne testowanie kodu i generowanie raportów analitycznych.
+  - **Integracja z NPM**: Używanie NPM do analizy i generowania tabel w TypeScript.
+
+### **3. Konfiguracja Środowiska**
+
+#### **3.1. Docker**
+
+- **Obraz Dockera**: Zawiera Go, Luvit, i inne narzędzia.
+- **Docker Compose**: Definiuje usługi kontenerów dla Go i Luvit.
+
+#### **3.2. GitHub Actions**
+
+- **Definicja Workflow**: Zawiera kroki do budowy, testowania i wdrażania.
+- **Integracja z Firebase**: Automatyzacja raportowania i analizy danych.
+
+### **4. Wykorzystanie Firebase**
+
+#### **4.1. Firebase Realtime Database / Firestore**
+
+- **Zastosowanie**: Przechowywanie danych gry w czasie rzeczywistym.
+
+#### **4.2. Firebase Authentication**
+
+- **Zastosowanie**: Uwierzytelnianie graczy.
+
+#### **4.3. Firebase Cloud Functions**
+
+- **Zastosowanie**: Automatyzacja procesów backendowych, przetwarzanie danych.
+
+#### **4.4. Firebase Analytics**
+
+- **Zastosowanie**: Śledzenie interakcji i analizy danych.
+
+### **5. Integracja z API**
+
+#### **5.1. Roblox API**
+
+- **Zastosowanie**: Integracja z platformą Roblox dla zarządzania grą.
+
+#### **5.2. Discord API**
+
+- **Zastosowanie**: Wysyłanie powiadomień i komunikacja.
+
+### **6. Dokumentacja i Raportowanie**
+
+#### **6.1. Dokumentacja**
+
+- **Pliki README**: Szczegółowy opis projektu, instrukcje instalacji i użytkowania.
+- **Changelog**: Śledzenie zmian w projekcie.
+
+#### **6.2. Raportowanie**
+
+- **Generowanie Raportów**: Automatyczne raportowanie testów i analiz, integracja z NPM i TypeScript.
+
+### **7. Warianty Projektu**
+
+#### **Wariant 1: Tradycyjne Środowisko CI/CD**
+
+- **Technologie**: Go, Docker, GitHub Actions, Firebase.
+- **Zalety**: Prosta konfiguracja, dobrze udokumentowane narzędzia, łatwa integracja.
+
+#### **Wariant 2: Rozszerzone Środowisko z Analityką**
+
+- **Technologie**: Go, Docker, GitHub Actions, Firebase, NPM, TypeScript.
+- **Zalety**: Zaawansowana analiza danych, lepsza integracja z narzędziami front-endowymi.
+
+#### **Wariant 3: Środowisko z Użyciem Azure**
+
+- **Technologie**: Go, Docker, GitHub Actions, Azure Functions, Firebase.
+- **Zalety**: Rozszerzone możliwości chmurowe, integracja z usługami Azure, możliwość rozbudowy w przyszłości.
+
+### **Podsumowanie**
+
+Projekt CityX wymaga złożonego podejścia do integracji różnych technologii i narzędzi. Kluczowe elementy to dobrze zaplanowane workflowy, skuteczna integracja z API, oraz pełna dokumentacja i raportowanie. Wybór odpowiedniego wariantu projektu zależy od specyficznych wymagań, takich jak potrzeby analityczne i preferencje dotyczące chmurowych środowisk obliczeniowych.
+
+Jeśli masz dodatkowe pytania dotyczące konkretnych aspektów projektu lub potrzebujesz dalszej pomocy w planowaniu, daj znać!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Cel Projektu: 
     - **Dynamiczna Podłoga w Open-World Sandbox (Cityx by Whitekali)**
 
