@@ -1,7 +1,5 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
-
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
@@ -9,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - LoggerModule for error logging
 - TileManagerModule for handling tile model loading and replacement
+
+### Changed
+- Integrated LoggerModule with TileManagerModule for improved error handling
+- Enhanced tile management system with new TileManagerModule functionality
+
+### Improved
+- Overall application stability and performance with the addition of LoggerModule
+- Tile model management efficiency through TileManagerModule implementation
 
 ## [0.1.0] - 2023-10-26
 ### Added
