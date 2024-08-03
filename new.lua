@@ -2,9 +2,9 @@ local fs = require("@lune/fs")
 local roblox = require("@lune/roblox")
  
 -- Reading a place file
-local placeFile = fs.readFile("myPlaceFile.rbxl")
+local placeFile = fs.readFile("cityx.rbxl")
 local game = roblox.deserializePlace(placeFile)
- 
+
 -- Manipulating and reading instances - just like in Roblox!
 local workspace = game:GetService("Workspace")
 for _, child in workspace:GetChildren() do
