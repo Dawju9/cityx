@@ -122,25 +122,8 @@ Projekt **CityX** ma złożoną strukturę z licznymi modułami oraz zróżnicow
 Projekt CityX wymaga złożonego podejścia do integracji różnych technologii i narzędzi. Kluczowe elementy to dobrze zaplanowane workflowy, skuteczna integracja z API, oraz pełna dokumentacja i raportowanie. Wybór odpowiedniego wariantu projektu zależy od specyficznych wymagań, takich jak potrzeby analityczne i preferencje dotyczące chmurowych środowisk obliczeniowych.
 
 Jeśli masz dodatkowe pytania dotyczące konkretnych aspektów projektu lub potrzebujesz dalszej pomocy w planowaniu, daj znać!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Cel Projektu: 
-    - **Dynamiczna Podłoga w Open-World Sandbox (Cityx by Whitekali)**
+**Dynamiczna Podłoga w Open-World Sandbox (Cityx by Whitekali)**
 
 Cel: Stworzenie dynamicznej podłogi w grze open-world sandbox,
     która będzie interaktywna, modularna i efektywna.
