@@ -1,4 +1,6 @@
--- Moduł zarządzania chunkami w grze Roblox
+
+
+--Moduł zarządzania chunkami w grze Roblox
 local module = {}
 
 -- Funkcja wywoływana podczas inicjalizacji chunków

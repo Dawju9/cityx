@@ -1,6 +1,5 @@
-local fs = require("@lune/fs")
-local roblox = require("@lune/roblox")
- 
+local fs = require(1)("@lune/fs")
+local roblox = require(1)("@lune/roblox") 
 -- Reading a place file
 local placeFile = fs.readFile("cityx.rbxl")
 local game = roblox.deserializePlace(placeFile)
@@ -13,4 +12,4 @@ end
  
 -- Writing a place filerokit add lune
 local newPlaceFile = roblox.serializePlace(game)
-fs.writeFile("myPlaceFile.rbxl", newPlaceFile)
+fs.writeFile("cityx.rbxl", newPlaceFile)
