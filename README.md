@@ -22,3 +22,10 @@ After installing dependencies, run `wally install` *or*, if you want to fix type
 Next, rename `src/server/TitleId.example.lua` to `TitleId.lua` and replace `TITLE_ID_HERE` with your actual PlayFab title ID.
 
 FINALLY, run `rojo build --output example.rbxl`
+
+
+
+
+
+
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVKtfWXNY=/?moveToViewport=-1613,-2217,3963,3506&embedId=853192986739" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
