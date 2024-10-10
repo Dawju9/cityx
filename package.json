@@ -1,0 +1,12 @@
+{
+  "name": "cityx",
+  "version": "1.0.0",
+  "description": "I've provided a full production-ready implementation of PlayFab's matchmaking here. Anybody is welcome to adapt it to\r their needs or contribute back up. The project comes with:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

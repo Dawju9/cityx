@@ -1,65 +1,65 @@
-name = "wally"
-description = "Package manager for Roblox"
-version = "0.3.2"
-license = "MPL-2.0"
-authors = ["Lucien Greathouse <lucien@uplift.games>"]
-edition = "2018"
+[package]
+name = "cityx"
+version = "0.1.0"
+authors = ["Whitekali <Discord: whitekali> <whitekali@aya.studio> <@251838559680593920>"]
+edition = "2024"
+description = "CityX - The Si'automaticion city 'x' procedural and modual game framework"
+license = "MIT OR Apache-2.0"
 
+# Workspace Definition
 [workspace]
 members = [
-    ".",
-    "wally-registry-backend",
+    "core", # Your core game logic
+    "server", # Server-specific code
+    "client", # Client-specific code (if applicable)
+    "renderer", # Rendering engine 
+    # ... add other modules as needed
 ]
 
-default-members = [
-    ".",
-    "wally-registry-backend",
-]
-
-[lib]
-name = "libwally"
-path = "src/lib.rs"
-
-[[bin]]
-name = "wally"
-path = "src/main.rs"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
+# Core Crate (libcityx)
 [dependencies]
-anyhow = "1.0.33"
-blake3 = "0.3.7"
-crossterm = "0.22.1"
-dirs = "3.0.1"
-env_logger = "0.8.1"
-fs-err = "2.5.0"
-git2 = "0.16.1"
-hex = "0.4.2"
-indoc = "1.0.3"
-log = "0.4.11"
-once_cell = "1.5.2"
-opener = "0.5.0"
-reqwest = { version = "0.11.18", features = ["blocking", "json"] }
-rpassword = "5.0.1"
-semver = { version = "0.11.0", features = ["serde"] }
-serde = { version = "1.0.116", features = ["derive"] }
-serde_json = "1.0.58"
-structopt = "0.3.18"
-tempfile = "3.1.0"
-toml = "0.5.6"
-toml_edit = "0.2.0"
-url = { version = "2.1.1", features = ["serde"] }
-walkdir = "2.3.1"
-whoami = "1.1.2"
-zip = "0.5.11"
-globset = "0.4.8"
-ubyte = "0.10.3"
-indicatif = "0.17.4"
-tokio = "1.28.2"
-serial_test = "2.0.0"
+matter = "matter-ecs/matter@0.8.3"
+roact = "roblox/roact@1.4.0"
+base64 = "reselim/base64@3.0.0" 
+signal = "sleitnick/signal@2.0.1" 
+trove = "sleitnick/trove@1.3.0" 
+promise = "evaera/promise@4.0.0" 
 
+# ... other core dependencies
+
+# Server Crate 
+[workspace.server]
+members = ["server"]
+
+[server.dependencies]
+# ... server-specific dependencies
+
+# Client Crate
+[workspace.client]
+members = ["client"]
+
+[client.dependencies]
+# ... client-specific dependencies
+
+# Renderer Crate
+[workspace.renderer]
+members = ["renderer"]
+
+[renderer.dependencies]
+# ... rendering engine dependencies
+
+# Development Dependencies
 [dev-dependencies]
-insta = { version = "1.1.0" }
+insta = { version = "1.1.0" } 
 
+# Features
 [features]
+selene = [] 
+wally = [] 
+tools = ["wally", "selene"]
 vendored-libgit2 = ["git2/vendored-libgit2"]
+
+# Tooling
+[tools]
+wally = { source = "upliftgames/wally", version = "0.3.2" }
+selene = { source = "Kampfkarren/selene", version = "0.22.0" }

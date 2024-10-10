@@ -1,0 +1,267 @@
+# Ten plik Cargo.toml definiuje zależności i strukturę dla projektu CityX, proceduralnego i modularnego frameworka gry. Jest podzielony na kilka komponentów:
+#
+# 1. Zależności backendu: Używane dla serwera opartego na Rust, w tym actix-web do obsługi żądań internetowych, 
+#       matter-ecs do logiki gry i serenity do integracji z Discordem.
+# 2. Zależności specyficzne dla serwera: Obejmują Matter ECS i Promise, prawdopodobnie do 
+#       obsługi stanu gry i operacji asynchronicznych po stronie serwera.
+# 3. Zależności specyficzne dla klienta: Obejmują Roact, Signal i Trove, które 
+#       są powszechnie używane do budowania interfejsów użytkownika i zarządzania zasobami w grach Roblox.
+# 4. Zależności specyficzne dla renderera: Zawierają tylko Roact, sugerując oddzielny 
+#       komponent renderujący, który głównie zajmuje się elementami UI lub wizualnymi.
+#
+# Plik zawiera również zależności deweloperskie i flagi funkcji, umożliwiające warunkową kompilację i integrację narzędzi.
+#
+# Ta struktura wspiera architekturę klient-serwer, gdzie serwer (backend oparty na Rust) obsługuje logikę gry, 
+#   zarządzanie stanem i integruje się z usługami zewnętrznymi, podczas gdy klient 
+#   (frontend oparty na Roblox) zarządza interfejsem użytkownika i lokalnym stanem gry. Komponent renderera może 
+#   obsługiwać specjalistyczne zadania renderowania lub generowania zasobów. Komunikacja między tymi komponentami 
+#   prawdopodobnie odbywa się za pomocą protokołów sieciowych (np. HTTP, WebSocket) ułatwionych przez framework actix-web 
+#   i *!* potencjalnie niestandardowe rozwiązania sieciowe.
+
+[package]
+name = "whitekali/cityx"
+version = "0.1.0"
+authors = ["Whitekali <Discord: whitekali> <whitekali@aya.studio> <@251838559680593920>"]
+edition = "2024"
+description = "CityX - Proceduralny i modularny framework gry miasta 'x' Si'automaticion"
+license = "MIT OR Apache-2.0"
+
+[workspace]
+members = [
+    "core",
+    "server",
+    "client",
+    "renderer",
+]
+
+# Zależności backendu (Rust)
+[dependencies]
+# ECS (Entity Component System) do logiki gry
+matter = "matter-ecs/matter@0.8.3"
+
+# Framework webowy do operacji po stronie serwera
+actix-rt = "2"
+actix-web = "4"
+
+# Serializacja/deserializacja
+serde = { version = "1.0", features = ["derive"] }
+
+# Integracja bota Discord
+serenity = { version = "0.11", features = ["client", "gateway", "http", "model", "cache"] }
+
+# Środowisko asynchroniczne
+tokio = { version = "1", features = ["full"] }
+
+# Logowanie
+env_logger = "0.10"
+log = "0.4"
+
+# Zarządzanie konfiguracją
+config = "0.13"
+serde_yaml = "0.9"
+
+# Obsługa błędów
+thiserror = "1"
+
+# Funkcjonalność daty i czasu
+chrono = "0.4"
+
+# Generowanie UUID
+uuid = { version = "1", features = ["v4"] }
+
+# Zależności specyficzne dla serwera
+[workspace.server]
+members = ["server"]
+
+[server.dependencies]
+matter = "matter-ecs/matter@0.8.3"
+promise = "evaera/promise@4.0.0"
+
+# Zależności specyficzne dla klienta
+[workspace.client]
+members = ["client"]
+
+[client.dependencies]
+# Framework UI dla Roblox
+roact = "roblox/roact@1.4.0"
+# Obsługa zdarzeń
+signal = "sleitnick/signal@2.0.1"
+# Zarządzanie zasobami
+trove = "sleitnick/trove@1.3.0"
+
+# Zależności specyficzne dla renderera
+[workspace.renderer]
+members = ["renderer"]
+
+[renderer.dependencies]
+roact = "roblox/roact@1.4.0"
+
+[dev-dependencies]
+insta = { version = "1.1.0" }
+
+[features]
+selene = []
+wally = []
+tools = ["wally", "selene"]
+vendored-libgit2 = ["git2/vendored-libgit2"]
+
+[tools]
+wally = { source = "upliftgames/wally", version = "0.3.2" }
+selene = { source = "Kampfkarren/selene", version = "0.22.0" }
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+# Mechanizm działania klient-serwer:
+# Ten plik Cargo.toml definiuje zależności i strukturę dla projektu CityX,
+# który jest proceduralnym i modularnym frameworkiem gry.
+# 
+# Projekt jest podzielony na kilka komponentów:
+# 1. Zależności backendu: Używane dla serwera opartego na Rust, w tym actix-web do
+#    obsługi żądań internetowych, matter-ecs do logiki gry i serenity do integracji z Discordem.
+# 
+# 2. Zależności specyficzne dla serwera: Obejmują Matter ECS i Promise, prawdopodobnie do obsługi
+#    stanu gry i operacji asynchronicznych po stronie serwera.
+# 
+# 3. Zależności specyficzne dla klienta: Obejmują Roact, Signal i Trove, które są powszechnie
+#    używane do budowania interfejsów użytkownika i zarządzania zasobami w grach Roblox.
+# 
+# 4. Zależności specyficzne dla renderera: Zawierają tylko Roact, sugerując oddzielny
+#    komponent renderujący, który głównie zajmuje się elementami UI lub wizualnymi.
+# 
+# Plik zawiera również zależności deweloperskie i flagi funkcji, umożliwiające
+# warunkową kompilację i integrację narzędzi.
+# 
+# Ta struktura wspiera architekturę klient-serwer, gdzie:
+# - Serwer (backend oparty na Rust) obsługuje logikę gry, zarządzanie stanem i integruje się
+#   z usługami zewnętrznymi (np. bot Discord, usługi internetowe).
+# - Klient (frontend oparty na Roblox) zarządza interfejsem użytkownika i lokalnym stanem gry.
+# - Komponent renderera może obsługiwać specjalistyczne zadania renderowania lub generowania zasobów.
+# 
+# Komunikacja między tymi komponentami prawdopodobnie odbywa się za pomocą protokołów sieciowych
+# (np. HTTP, WebSocket) ułatwionych przez framework actix-web i potencjalnie niestandardowe
+# rozwiązania sieciowe.
+# 1. Backend dependencies: Used for the Rust-based server, including actix-web for handling web requests, matter-ecs for game logic, and serenity for Discord integration.
+# 2. Server-specific dependencies: Includes Matter ECS and Promise, likely for handling game state and asynchronous operations on the server side.
+# 3. Client-specific dependencies: Includes Roact, Signal, and Trove, which are commonly used for building user interfaces and managing resources in Roblox games.
+# 4. Renderer-specific dependencies: Only includes Roact, suggesting a separate rendering component that primarily deals with UI or visual elements.
+#
+# The file also includes development dependencies and feature flags, allowing for conditional compilation and tooling integration.
+#
+# This structure supports a client-server architecture where the server (Rust-based backend) handles game logic, state management, and integrates with external services, while the client (Roblox-based frontend) manages the user interface and local game state. The renderer component may handle specialized rendering tasks or asset generation. Communication between these components likely occurs through network protocols (e.g., HTTP, WebSocket) facilitated by the actix-web framework and potentially custom networking solutions.
+[package]
+name = "whitekali/cityx"
+version = "0.1.0"
+authors = ["Whitekali <Discord: whitekali> <whitekali@aya.studio> <@251838559680593920>"]
+edition = "2024"
+description = "CityX - The Si'automaticion city 'x' procedural and modular game framework"
+license = "MIT OR Apache-2.0"
+
+[workspace]
+members = [
+    "core",
+    "server",
+    "client",
+    "renderer",
+]
+
+# Backend dependencies (Rust)
+[dependencies]
+# ECS (Entity Component System) for game logic
+matter = "matter-ecs/matter@0.8.3"
+# Web framework for server-side operations
+actix-rt = "2"
+actix-web = "4"
+# Serialization/deserialization
+serde = { version = "1.0", features = ["derive"] }
+# Discord bot integration
+serenity = { version = "0.11", features = ["client", "gateway", "http", "model", "cache"] }
+# Asynchronous runtime
+tokio = { version = "1", features = ["full"] }
+# Logging
+env_logger = "0.10"
+log = "0.4"
+# Configuration management
+config = "0.13"
+serde_yaml = "0.9"
+# Error handling
+thiserror = "1"
+# Date and time functionality
+chrono = "0.4"
+# UUID generation
+uuid = { version = "1", features = ["v4"] }
+
+# Server-specific dependencies
+[workspace.server]
+members = ["server"]
+
+[server.dependencies]
+matter = "matter-ecs/matter@0.8.3"
+promise = "evaera/promise@4.0.0"
+
+# Client-specific dependencies
+[workspace.client]
+members = ["client"]
+
+[client.dependencies]
+# UI framework for Roblox
+roact = "roblox/roact@1.4.0"
+# Event handling
+signal = "sleitnick/signal@2.0.1"
+# Resource management
+trove = "sleitnick/trove@1.3.0"
+
+# Renderer-specific dependencies
+[workspace.renderer]
+members = ["renderer"]
+
+[renderer.dependencies]
+roact = "roblox/roact@1.4.0"
+
+[dev-dependencies]
+insta = { version = "1.1.0" }
+
+[features]
+selene = []
+wally = []
+tools = ["wally", "selene"]
+vendored-libgit2 = ["git2/vendored-libgit2"]
+
+[tools]
+wally = { source = "upliftgames/wally", version = "0.3.2" }
+selene = { source = "Kampfkarren/selene", version = "0.22.0" }
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+# Client-Server Working Mechanism:
+# This Cargo.toml file defines the dependencies and structure for the CityX project,
+# which is a procedural and modular game framework.
+# 
+# The project is divided into several components:
+# 1. Backend dependencies: Used for the Rust-based server, including actix-web for
+#    handling web requests, matter-ecs for game logic, and serenity for Discord integration.
+# 
+# 2. Server-specific dependencies: Includes Matter ECS and Promise, likely for handling
+#    game state and asynchronous operations on the server side.
+# 
+# 3. Client-specific dependencies: Includes Roact, Signal, and Trove, which are commonly
+#    used for building user interfaces and managing resources in Roblox games.
+# 
+# 4. Renderer-specific dependencies: Only includes Roact, suggesting a separate rendering
+#    component that primarily deals with UI or visual elements.
+# 
+# The file also includes development dependencies and feature flags, allowing for
+# conditional compilation and tooling integration.
+# 
+# This structure supports a client-server architecture where:
+# - The server (Rust-based backend) handles game logic, state management, and integrates
+#   with external services (e.g., Discord bot, web services).
+# - The client (Roblox-based frontend) manages the user interface and local game state.
+# - The renderer component may handle specialized rendering tasks or asset generation.
+# 
+# Communication between these components likely occurs through network protocols
+# (e.g., HTTP, WebSocket) facilitated by the actix-web framework and potentially custom
+# networking solutions.
