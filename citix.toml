@@ -1,41 +1,4 @@
-[server]
-address = "127.0.0.1"  # Adres IP serwera (localhost)
-port = 8080  # Port, na którym serwer będzie działać
-
-[package]
-name = "whitekali/cityx"  # Nazwa paczki projektu CityX
-description = "CityX - The Si'automaticion city 'x' procedural and modular game framework"
-version = "0.1.0"  # Wersja paczki
-license = "MIT OR Apache-2.0"  # Licencja projektu
-authors = ["Whitekali <Discord: whitekali> <whitekali@aya.studio> <@251838559680593920>"]
-realm = "shared"  # Zakres projektu (np. shared między backendem a klientem)
-registry = "https://github.com/UpliftGames/wally-index"  # Rejestr dla zależności Wally
-private = true  # Paczka prywatna, niepubliczna
-
-[dependencies]
-matter = "matter-ecs/matter@0.8.3"  # Zależność ECS dla logiki gry
-roact = "roblox/roact@1.4.0"  # Zależność do tworzenia komponentów UI
-base64 = "reselim/base64@3.0.0"  # Kodowanie/odkodowywanie Base64
-signal = "sleitnick/signal@2.0.1"  # Implementacja sygnałów i zdarzeń
-trove = "sleitnick/trove@1.3.0"  # Zarządzanie zasobami w grze
-promise = "evaera/promise@4.0.0"  # Obsługa Promise w grze
-
-[server-dependencies]
-matter = "matter-ecs/matter@0.8.3"  # Zależności serwera
-promise = "evaera/promise@4.0.0"
-
-[client-dependencies]
-roact = "roblox/roact@1.4.0"  # Zależności klienta (np. UI)
-signal = "sleitnick/signal@2.0.1"
-trove = "sleitnick/trove@1.3.0"
-
-[renderer-dependencies]
-roact = "roblox/roact@1.4.0"  # Zależności renderera (jeśli inny niż klient)
-
-[features]
-selene = []  # Funkcja opcjonalna dla integracji z Selene
-wally = []  # Funkcja opcjonalna dla integracji z Wally
-tools = ["wally", "selene"]  # Narzędzia projektowe
+# Konfiguracja podstawowych danych gry
 
 [game]
 # Konfiguracja specyficzna dla gry
@@ -43,6 +6,13 @@ tools = ["wally", "selene"]  # Narzędzia projektowe
 # name = "CityX"
 # max_players = 50
 # genre = "Simulation"
+# Konfiguracja ustawień gry.
+
+# Ustawienia grafiki
+[graphics]
+resolution = "1920x1080" # Rozdzielczość ekranu
+fullscreen = true        # Tryb pełnoekranowy
+
 [game.settings]
 name = "CityX"  # Nazwa gry
 version = "0.1.0"  # Wersja gry
@@ -51,6 +21,15 @@ max_players = 100  # Maksymalna liczba graczy w jednej sesji
 min_players = 1  # Minimalna liczba graczy potrzebna do rozpoczęcia rozgrywki
 difficulty = "normal"  # Domyślny poziom trudności ("easy", "normal", "hard", "custom")
 language = "en"  # Domyślny język gry
+
+
+# Konfiguracja serwera
+[server]
+address = "127.0.0.1"  # Adres IP serwera
+port = 8080            # Port serwera
+
+# ... inne sekcje konfiguracyjne
+
 [game.test_place]
 name = "CityX Test Place"
 place_id = 0  # Na początek, ID będzie 0, ale będzie aktualizowane przez skrypt Lua

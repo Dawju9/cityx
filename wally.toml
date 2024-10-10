@@ -2,7 +2,7 @@
 # definiować tylko zależności klienta Roblox. Upewnij się, że masz 
 # również plik Cargo.toml do zarządzania zależnościami Rust.
 #└── Wally.toml (dla client)
-Wally.toml (dla cityx-client):
+#Wally.toml (dla cityx-client):
 
 [package]
 name = "whitekali/cityx"
@@ -23,10 +23,10 @@ trove = "sleitnick/trove@1.3.0"
 
 # ... (pozostałe zależności klienta)
 
-Klient (cityx-client, Lua/Roblox):
-Framework UI (np. Roact, Rodux)
-Biblioteki komunikacyjne (np. HttpService z Roblox API)
-Narzędzia pomocnicze (np. Signal, Trove)
+#Klient (cityx-client, Lua/Roblox):
+#Framework UI (np. Roact, Rodux)
+#Biblioteki komunikacyjne (np. HttpService z Roblox API)
+#Narzędzia pomocnicze (np. Signal, Trove)
 
 
 
@@ -40,11 +40,11 @@ realm = "shared"
 registry = "https://github.com/UpliftGames/wally-index"
 
 [dependencies]
-matter = "matter-ecs/matter@0.8.3"
-roact = "roblox/roact@1.4.0"
-base64 = "reselim/base64@3.0.0"
-signal = "sleitnick/signal@2.0.1"
-trove = "sleitnick/trove@1.3.0"
+#matter = "matter-ecs/matter@0.8.3"
+#roact = "roblox/roact@1.4.0"
+#base64 = "reselim/base64@3.0.0"
+#signal = "sleitnick/signal@2.0.1"
+#trove = "sleitnick/trove@1.3.0"
 promise = "evaera/promise@4.0.0"
 actix-rt = "2"
 actix-web = "4"

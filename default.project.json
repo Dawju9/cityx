@@ -14,18 +14,18 @@
         "GlobalShadows": true,
         "Outlines": false,
         "Technology": "Voxel"
-      }, 
+      },
       "$ignoreUnknownInstances": true,
-      "$path": "src/Lighting"
+      "$path": "game/scripts/managers/lighting_manager.lua"
     },
     "ReplicatedStorage": {
       "Common": {
-        "$path": "src/shared"
+        "$path": "cityx-core"
       }
     },
     "ServerScriptService": {
       "Server": {
-        "$path": "src/server"
+        "$path": "cityx-server"
       }
     },
     "SoundService": {
@@ -36,7 +36,7 @@
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "Client": {
-          "$path": "src/client"
+          "$path": "cityx-client"
         }
       }
     },
@@ -61,12 +61,12 @@
             "StudsPerTileV": 8.0
           },
           "$ignoreUnknownInstances": true,
-          "$path": "src/Workspace/Baseplate/Texture"
+          "$path": "game/models/stairs/basic_stair.rbxm"
         },
-      "$path": "src/Workspace/Baseplate"
+        "$path": "game/models/stairs"
       },
       "$ignoreUnknownInstances": true,
-      "$path": "src/Workspace"
+      "$path": "game"
     }
   }
 }

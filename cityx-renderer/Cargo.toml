@@ -1,0 +1,78 @@
+# Główna sekcja projektu
+[package]
+name = "cityx-renderer"  # Nazwa paczki backendu
+version = "0.1.0"  # Wersja projektu backendowego
+edition = "2021"  # Używana edycja Rust (2024)
+description = "CityX renderer - The Si'automaticion city 'x' procedural and modular game framework"  # Krótki opis projektu
+license = "MIT OR Apache-2.0"  # Licencja projektu
+authors = ["Whitekali <Discord: whitekali> <whitekali@aya.studio> <@251838559680593920>"]  # Autorzy
+
+# Sekcja lib - definiuje bibliotekę w projekcie, jeśli będzie taka potrzebna
+[lib]
+name = "libcityx"  # Nazwa biblioteki
+path = "src/lib.rs"  # Ścieżka do pliku z biblioteką
+
+# Sekcja bin - definiuje binarny plik wykonywalny
+[[bin]]
+name = "cityx"  # Nazwa pliku binarnego
+path = "src/main.rs"  # Ścieżka do głównego pliku wykonywalnego
+
+# Zależności projektu (dependencies) - paczki używane w projekcie
+[dependencies]
+# ECS (Entity Component System) - logika gry
+#matter-ecs = "0.8.3"
+
+# Framework webowy do operacji po stronie serwera
+actix-rt = "2"
+actix-web = "4.0"
+
+# Serializacja/deserializacja
+serde = { version = "1.0", features = ["derive"] }  # Serializacja z opcją derive
+serde_json = "1.0"  # Serializacja do/ze struktury JSON
+
+# Integracja z Discordem (np. boty)
+serenity = { version = "0.11", features = ["client", "gateway", "http", "model", "cache"] }
+
+# Asynchroniczna obsługa
+tokio = { version = "1", features = ["full"] }
+
+# Logowanie i zarządzanie konfiguracją logów
+env_logger = "0.10"
+log = "0.4"
+
+# Zarządzanie konfiguracją aplikacji
+config = "0.13"
+serde_yaml = "0.9"  # Obsługa konfiguracji YAML
+
+# Obsługa błędów
+thiserror = "1"
+
+# Funkcjonalność związana z datami i czasem
+chrono = "0.4"
+
+# Generowanie UUID
+uuid = { version = "1", features = ["v4"] }
+
+# Obsługa obietnic (Promise handling)
+#promise = "evaera/promise@4.0.0"
+# Obsługa HTTP (np. dla REST API)
+reqwest = { version = "0.11.18", features = ["blocking", "json"] }
+
+# Dodatkowe paczki
+anyhow = "1.0.33"  # Uproszczona obsługa błędów
+blake3 = "0.3.7"  # Algorytm haszujący
+crossterm = "0.22.1"  # Terminal i operacje terminalowe
+tempfile = "3.1.0"  # Obsługa plików tymczasowych
+
+# Zależności do testów (dev-dependencies)
+[dev-dependencies]
+insta = { version = "1.1.0" }  # Testowanie snapshotów
+
+# Dodatkowe funkcje projektu (features)
+[features]
+#vendored-libgit2 = ["git2/vendored-libgit2"]  # Wspiera libgit2 jako zależność wkompilowaną
+
+# Ustawienia dla buildów w trybie release
+[profile.release]
+lto = true  # Link-time optimization dla lepszej optymalizacji kodu
+codegen-units = 1  # Jednostki generowania kodu ustawione na 1 dla lepszej optymalizacji

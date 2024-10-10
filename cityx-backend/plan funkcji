@@ -155,3 +155,25 @@
 
 3. `displayPerformanceMetrics()`
    - Wyświetla metryki wydajności gry.
+
+
+
+
+   Lista dobrych manier i instrukcji budowy dla cityx.toml
+Plik cityx.toml przechowuje konfigurację specyficzną dla gry CityX. Poniżej przedstawiam listę dobrych praktyk i instrukcji, jak go zorganizować i wykorzystać:
+
+Dobre Maniery:
+
+Organizacja:
+
+Sekcje: Podziel plik na sekcje logiczne, np. [server], [game], [graphics], [audio], etc.
+Komentarze: Wyjaśnij znaczenie poszczególnych opcji, zwłaszcza jeśli nie są one oczywiste.
+Spacje: Używaj spacji wokół znaków = dla lepszej czytelności.
+Nazewnictwo:
+
+Opisowe klucze: Używaj opisowych nazw kluczy, np. server_address zamiast addr.
+Spójność: Stosuj spójne nazewnictwo w całym pliku (np. snake_case).
+Wartości:
+
+Typy danych: Używaj odpowiednich typów danych dla wartości (string, integer, boolean, etc.).
+Domyślne wartości: Jeśli to możliwe, definiuj domyślne wartości dla opcji.

@@ -2,7 +2,7 @@
 [package]
 name = "cityx-backend"  # Nazwa paczki backendu
 version = "0.1.0"  # Wersja projektu backendowego
-edition = "2024"  # Używana edycja Rust (2024)
+edition = "2021"  # Używana edycja Rust (2024)
 description = "CityX Backend - The Si'automaticion city 'x' procedural and modular game framework"  # Krótki opis projektu
 license = "MIT OR Apache-2.0"  # Licencja projektu
 authors = ["Whitekali <Discord: whitekali> <whitekali@aya.studio> <@251838559680593920>"]  # Autorzy
@@ -20,8 +20,7 @@ path = "src/main.rs"  # Ścieżka do głównego pliku wykonywalnego
 # Zależności projektu (dependencies) - paczki używane w projekcie
 [dependencies]
 # ECS (Entity Component System) - logika gry
-matter-ecs = "0.8.3"
-
+#matter-ecs = "0.8.3"
 # Framework webowy do operacji po stronie serwera
 actix-rt = "2"
 actix-web = "4.0"
@@ -54,7 +53,7 @@ chrono = "0.4"
 uuid = { version = "1", features = ["v4"] }
 
 # Obsługa obietnic (Promise handling)
-promise = "4.0.0"
+#promise = "evaera/promise@4.0.0"
 
 # Obsługa HTTP (np. dla REST API)
 reqwest = { version = "0.11.18", features = ["blocking", "json"] }
@@ -71,7 +70,7 @@ insta = { version = "1.1.0" }  # Testowanie snapshotów
 
 # Dodatkowe funkcje projektu (features)
 [features]
-vendored-libgit2 = ["git2/vendored-libgit2"]  # Wspiera libgit2 jako zależność wkompilowaną
+#vendored-libgit2 = ["git2/vendored-libgit2"]  # Wspiera libgit2 jako zależność wkompilowaną
 
 # Ustawienia dla buildów w trybie release
 [profile.release]
