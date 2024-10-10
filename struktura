@@ -1,0 +1,167 @@
+# Struktura projektu "Stairs Lifters"
+
+## Struktura katalogów
+cityx/
+├── Cargo.toml <-- Konfiguracja projektu Rust dla backendu i renderera
+├── Wally.toml <-- Konfiguracja zależności dla części Roblox (client, core, server)
+#├── citix.toml  <-- Konfiguracja projektu CityX├── cityx-backend/
+│   └── Cargo.toml <-- Cargo.toml dla backendu (Rust)
+├── cityx-client/
+│   └── main.lua <-- Główny skrypt klienta w Roblox Lua
+├── cityx-core/
+│   └── core_code.lua <-- Logika gry (core) w Roblox Lua
+├── cityx-server/
+│   └── main_server.lua <-- Logika serwera w Roblox Lua
+├── cityx-renderer/
+│   └── lib.rs <-- Renderer (Rust)
+
+
+
+
+
+
+
+
+
+cityx/
+├── Cargo.toml  <-- Definicja projektu Rust
+├── Wally.toml  <-- Zależności projektu Wally
+├── cityx-backend/
+│   └── Cargo.toml  <-- Backend w Rust
+├── core/
+│   └── ... (kod Lua)?
+├── server/
+│   └── ... (kod Lua)?
+├── client/
+│   └── ... (kod Lua)?
+├── renderer/
+│   └── ... (kod Lua)?
+└── game/
+  ├── scripts/
+  │   ├── main.lua
+  │   ├── managers/
+  │   │   ├── level_manager.lua
+  │   │   ├── stair_manager.lua
+  │   │   ├── player_manager.lua
+  │   │   ├── leaderboard_manager.lua
+  │   │   └── lighting_manager.lua
+  │   ├── utils/
+  │   │   ├── debug_utils.lua
+  │   │   └── performance_tracker.lua
+  │   └── config/
+  │       └── game_settings.lua
+  ├── models/
+  │   └── stairs/
+  │       ├── basic_stair.rbxm
+  │       ├── obstacle_spike.rbxm
+  │       └── moving_platform.rbxm
+  ├── assets/
+  │   ├── ui/
+  │   │   ├── hud.rbxm
+  │   │   ├── main_menu.rbxm
+  │   │   └── game_over_screen.rbxm
+  │   └── audio/
+  │       ├── background_music.mp3
+  │       ├── jump_sound.mp3
+  │       └── fall_sound.mp3
+  └── data/
+      └── player_data/
+          ├── player_progress.json
+          └── global_leaderboard.json
+
+cityx/
+├── cityx-server/
+│   └── src/
+│       └── main.rs (punkt wejścia serwera)
+├── cityx-client/
+│   └── src/
+│       └── main.lua (główny skrypt klienta Roblox)
+├── cityx-renderer/
+│   └── src/
+│       └── lib.rs (kod współdzielony)
+├── Cargo.toml (zarządzanie pakietami Rust)
+├── cityx.toml (konfiguracja gry)
+└── Wally.toml (zarządzanie pakietami Roblox)
+
+cityx/
+├── Cargo.toml
+├── Wally.toml
+├── cityx-backend/
+│   └── Cargo.toml
+├── cityx-client/
+│   └── main.lua
+├── cityx-renderer/
+│   └── lib.rs
+└── game/
+    ├── scripts/
+    ├── models/
+    └── assets/
+
+
+Główne zależności dla komponentów:
+
+Backend (cityx-backend, Rust):
+Framework webowy (np. actix-web, rocket)
+Serializacja/deserializacja (np. serde, serde_json)
+Baza danych (jeśli używana, np. diesel, sqlx)
+Biblioteki sieciowe (np. tokio, async-std)
+Logowanie (np. log, env_logger)
+Klient (cityx-client, Lua/Roblox):
+Framework UI (np. Roact, Rodux)
+Biblioteki komunikacyjne (np. HttpService z Roblox API)
+Narzędzia pomocnicze (np. Signal, Trove)
+Renderer (cityx-renderer, Rust):
+Biblioteka graficzna (np. wgpu, glium)
+Formaty modeli 3D (np. obj, gltf)
+Matematyka (np. glm, nalgebra)
+Ważne uwagi:
+
+Pamiętaj o prawidłowym zdefiniowaniu workspace'u w głównym pliku Cargo.toml, aby uwzględnić backend i renderer.
+Upewnij się, że nazwy pakietów w Cargo.toml i Wally.toml są spójne.
+Dokładne zależności będą zależeć od specyfiki twojej gry.
+
+
+## Opis projektu
+
+Projekt "Miastox" jest częścią większego frameworka gry CityX, który łączy technologie Rust i Lua w środowisku Roblox. 
+Struktura projektu została zorganizowana w następujący sposób:
+
+1. Główne pliki konfiguracyjne:
+ - Cargo.toml: Definiuje zależności i strukturę dla części projektu opartej na Rust.
+ - Wally.toml: Określa zależności dla części projektu opartej na Lua w środowisku Roblox.
+ - citix.toml: Zawiera specyficzne konfiguracje dla projektu CityX.
+
+2. Komponenty projektu:
+ - cityx-backend: Zawiera backend napisany w Rust, odpowiedzialny za logikę serwerową i integracje z zewnętrznymi usługami.
+ - core, server, client, renderer: Moduły Lua odpowiedzialne za różne aspekty gry w środowisku Roblox.
+ - game: Zawiera zasoby gry, skrypty Lua i dane.
+
+3. Funkcjonalności:
+ Projekt obejmuje szeroki zakres funkcji, w tym inicjalizację gry, zarządzanie schodkami, interakcje gracza, system inwentarza, zarządzanie AI, system rozgrywki, interfejs użytkownika, rozwój postaci, zarządzanie zasobami, system dźwięku, networking oraz debugowanie i analitykę.
+
+4. Architektura:
+ Projekt wykorzystuje architekturę klient-serwer, gdzie backend Rust obsługuje krytyczne operacje serwerowe, a komponenty Lua w Roblox zajmują się logiką gry, renderowaniem i interakcjami użytkownika.
+
+5. Zależności:
+ Projekt korzysta z różnych bibliotek i frameworków, w tym Matter ECS do logiki gry, Roact do interfejsów użytkownika, oraz różnych narzędzi do obsługi asynchroniczności, zarządzania zasobami i debugowania.
+
+Ta struktura pozwala na modularny rozwój gry, łącząc wydajność Rust z elastycznością Lua w środowisku Roblox, co umożliwia tworzenie złożonych, skalowalnych gier.
+
+
+
+
+cityx/ : Główny katalog projektu.
+cityx-server/ : Katalog serwera gry (Rust).
+src/main.rs: Punkt wejścia dla serwera.
+cityx-client/ : Katalog klienta gry (Roblox Lua).
+src/main.lua: Główny skrypt klienta Roblox.
+cityx-renderer/ : Katalog kodu współdzielonego (Rust).
+src/lib.rs: Biblioteka Rust zawierająca kod używany przez serwer i klienta.
+Cargo.toml: Plik konfiguracyjny dla Cargo (Rust).
+cityx.toml: Plik konfiguracyjny dla gry CityX.
+Wally.toml: Plik konfiguracyjny dla Wally (Roblox).
+Dodatkowe uwagi:
+
+Wewnątrz każdego komponentu (cityx-server, cityx-client, cityx-renderer) możesz tworzyć dodatkowe moduły i pliki w miarę rozwoju projektu.
+Dokładna struktura plików i katalogów może się różnić w zależności od specyfiki twojej gry i preferencji.
+Pamiętaj o dodaniu odpowiednich zależności do plików Cargo.toml i Wally.toml.

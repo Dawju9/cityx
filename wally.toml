@@ -1,31 +1,33 @@
-# Ten plik wally.toml definiuje zależności i strukturę projektu CityX,
-# który jest proceduralnym i modularnym frameworkiem gry.
-#
-# Projekt jest podzielony na kilka komponentów:
-# 1. Wspólne zależności: Używane w całym projekcie, w tym Matter ECS do logiki gry,
-#    Roact do UI i różne biblioteki narzędziowe.
-#
-# 2. Zależności specyficzne dla serwera: Obejmują Matter ECS i Promise, prawdopodobnie do obsługi
-#    stanu gry i operacji asynchronicznych po stronie serwera.
-#
-# 3. Zależności specyficzne dla klienta: Obejmują Roact, Signal i Trove, które są powszechnie
-#    używane do budowania interfejsów użytkownika i zarządzania zasobami w grach Roblox.
-#
-# 4. Zależności specyficzne dla renderera: Zawierają tylko Roact, sugerując oddzielny komponent
-#    renderujący, który głównie zajmuje się UI lub elementami wizualnymi.
-#
-# Plik zawiera również zależności deweloperskie i flagi funkcji, umożliwiające
-# warunkową kompilację i integrację narzędzi.
-#
-# Ta struktura wspiera architekturę klient-serwer, gdzie:
-# - Serwer (backend) obsługuje logikę gry, zarządzanie stanem i potencjalnie integruje się
-#   z usługami zewnętrznymi (np. bot Discord, usługi internetowe).
-# - Klient (frontend oparty na Roblox) zarządza interfejsem użytkownika i lokalnym stanem gry.
-# - Komponent renderujący może obsługiwać specjalistyczne zadania renderowania lub generowanie zasobów.
-#
-# Komunikacja między tymi komponentami prawdopodobnie odbywa się poprzez protokoły sieciowe
-# (np. HTTP, WebSocket) ułatwione przez platformę Roblox i potencjalnie niestandardowe
-# rozwiązania sieciowe.
+#Twój plik Wally.toml powinien być umieszczony w głównym katalogu projektu i
+# definiować tylko zależności klienta Roblox. Upewnij się, że masz 
+# również plik Cargo.toml do zarządzania zależnościami Rust.
+#└── Wally.toml (dla client)
+Wally.toml (dla cityx-client):
+
+[package]
+name = "whitekali/cityx"
+description = "CityX - The Si'automaticion city 'x' procedural and modular game framework"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+authors = ["Whitekali <Discord: whitekali> <whitekali@aya.studio> <@251838559680593920>"]
+realm = "shared"
+registry = "https://github.com/UpliftGames/wally-index"
+
+[dependencies]
+# ... (tutaj powinny być tylko zależności wspólne dla całego projektu, np. biblioteki serializacji)
+
+[client-dependencies]
+roact = "roblox/roact@1.4.0"
+signal = "sleitnick/signal@2.0.1"
+trove = "sleitnick/trove@1.3.0"
+
+# ... (pozostałe zależności klienta)
+
+Klient (cityx-client, Lua/Roblox):
+Framework UI (np. Roact, Rodux)
+Biblioteki komunikacyjne (np. HttpService z Roblox API)
+Narzędzia pomocnicze (np. Signal, Trove)
+
 
 
 [package]

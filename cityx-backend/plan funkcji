@@ -1,0 +1,157 @@
+# Stairs Lifters - Lista Funkcji
+
+## 1. Inicjalizacja i Konfiguracja
+
+1. `initializeGame()`
+   - Inicjalizuje podstawowe ustawienia gry, świat i systemy.
+
+2. `loadPlayerData(playerID)`
+   - Wczytuje dane gracza, w tym statystyki, inwentarz i uprawnienia.
+
+3. `generateLevel(levelID)`
+   - Generuje poziom gry z odpowiednimi schodkami i przeszkodami.
+
+4. `initializeAI()`
+   - Inicjalizuje postacie AI (przeciwników i sojuszników).
+
+## 2. Zarządzanie Schodkami
+
+1. `createStair(type, position, number)`
+   - Tworzy schodek określonego typu w danej pozycji z przypisanym numerem.
+
+2. `setStairProperties(stair, properties)`
+   - Ustawia właściwości schodka (np. czas trwania, efekty specjalne).
+
+3. `activateStairLight(stair)`
+   - Aktywuje lampkę na schodku.
+
+4. `triggerStairEffect(stair)`
+   - Uruchamia specjalny efekt schodka (np. pułapkę, znikanie).
+
+5. `updateStairVisibility(stair)`
+   - Aktualizuje widoczność schodka (np. dla schodków "Blink death").
+
+## 3. Interakcje Gracza
+
+1. `loadStair(player, stairType)`
+   - Ładuje schodek do inwentarza gracza.
+
+2. `unloadStair(player, position)`
+   - Wyładowuje schodek z inwentarza gracza na określoną pozycję.
+
+3. `movePlayer(player, direction)`
+   - Porusza graczem w określonym kierunku.
+
+4. `jumpPlayer(player)`
+   - Wykonuje skok gracza.
+
+5. `updatePlayerStats(player, stat, value)`
+   - Aktualizuje statystyki gracza (np. rangę, permisje).
+
+## 4. System Inwentarza
+
+1. `addItemToInventory(player, item)`
+   - Dodaje przedmiot do inwentarza gracza.
+
+2. `removeItemFromInventory(player, item)`
+   - Usuwa przedmiot z inwentarza gracza.
+
+3. `equipItem(player, item)`
+   - Wyposaża gracza w wybrany przedmiot lub strój.
+
+4. `updateInventoryUI(player)`
+   - Aktualizuje interfejs inwentarza gracza.
+
+## 5. Zarządzanie AI
+
+1. `updateAIBehavior(aiCharacter)`
+   - Aktualizuje zachowanie postaci AI.
+
+2. `aiPlaceStair(aiCharacter)`
+   - Pozwala AI na umieszczenie schodka.
+
+3. `aiAssistPlayer(aiCharacter, player)`
+   - Sprawia, że AI pomaga graczowi (np. przenosi ciężkie schodki).
+
+## 6. System Rozgrywki
+
+1. `updateGameState()`
+   - Aktualizuje ogólny stan gry.
+
+2. `checkWinCondition()`
+   - Sprawdza, czy zostały spełnione warunki zwycięstwa.
+
+3. `updateLeaderboard()`
+   - Aktualizuje tablicę wyników.
+
+4. `changeWeatherConditions()`
+   - Zmienia warunki pogodowe w grze.
+
+## 7. Interfejs Użytkownika
+
+1. `updatePlayerHUD(player)`
+   - Aktualizuje HUD gracza z informacjami o poziomie, czasie itp.
+
+2. `updateMinimap()`
+   - Aktualizuje minimapę z pozycjami graczy i schodków.
+
+3. `showNotification(message)`
+   - Wyświetla powiadomienie dla gracza.
+
+4. `toggleInventoryUI(player)`
+   - Przełącza widoczność interfejsu inwentarza.
+
+## 8. Rozwój Postaci
+
+1. `levelUpSkill(player, skill)`
+   - Zwiększa poziom umiejętności gracza.
+
+2. `unlockNewAbility(player, ability)`
+   - Odblokowuje nową zdolność dla gracza.
+
+3. `applyCustomization(player, customization)`
+   - Stosuje wybrane opcje personalizacji do postaci gracza.
+
+## 9. Zarządzanie Zasobami
+
+1. `loadAssets(assetList)`
+   - Ładuje zasoby gry (modele, tekstury, dźwięki).
+
+2. `unloadUnusedAssets()`
+   - Zwalnia nieużywane zasoby dla optymalizacji pamięci.
+
+3. `preloadLevelAssets(levelID)`
+   - Wstępnie ładuje zasoby dla nadchodzącego poziomu.
+
+## 10. System Dźwięku
+
+1. `playSound(soundID, position)`
+   - Odtwarza dźwięk w określonej pozycji.
+
+2. `adjustMusicVolume(volume)`
+   - Dostosowuje głośność muzyki w tle.
+
+3. `triggerAmbientSound(environmentType)`
+   - Uruchamia dźwięki otoczenia odpowiednie dla danego środowiska.
+
+## 11. Networking
+
+1. `syncPlayerPosition(player)`
+   - Synchronizuje pozycję gracza z serwerem.
+
+2. `broadcastStairPlacement(stair)`
+   - Informuje innych graczy o umieszczeniu nowego schodka.
+
+3. `updateGlobalGameState()`
+   - Aktualizuje globalny stan gry dla wszystkich graczy.
+
+## 12. Debugowanie i Analityka
+
+1. `logDebugInfo(message)`
+   - Zapisuje informacje debugowania.
+
+2. `collectAnalytics(event)`
+   - Zbiera dane analityczne o wydarzeniach w grze.
+
+3. `displayPerformanceMetrics()`
+   - Wyświetla metryki wydajności gry.
