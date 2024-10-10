@@ -1,0 +1,11 @@
+F:\GithubProjekty\cityx\target\debug\deps\libfutures_task-94c03e56de5ff0a8.rmeta: C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src/lib.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\spawn.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\arc_wake.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\waker.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\waker_ref.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\future_obj.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\noop_waker.rs
+
+F:\GithubProjekty\cityx\target\debug\deps\futures_task-94c03e56de5ff0a8.d: C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src/lib.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\spawn.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\arc_wake.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\waker.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\waker_ref.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\future_obj.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\noop_waker.rs
+
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src/lib.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\spawn.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\arc_wake.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\waker.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\waker_ref.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\future_obj.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\futures-task-0.3.31\src\noop_waker.rs:
