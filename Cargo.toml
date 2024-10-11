@@ -8,12 +8,7 @@ authors = ["Spark Team <spark.team@gmail.com>"]
 
 [dependencies]  
 serde = "1.0"
-#matter = "matter-ecs/matter@0.8.3"
-#roact = "roblox/roact@1.4.0"
-#base64 = "reselim/base64@3.0.0"
-#signal = "sleitnick/signal@2.0.1"
-#trove = "sleitnick/trove@1.3.0"
-#promise = "evaera/promise@4.0.0"
+signal = "0.7.0"
 anyhow = "1.0.33"
 blake3 = "0.3.7"
 crossterm = "0.22.1"
@@ -26,15 +21,12 @@ indoc = "1.0.3"
 log = "0.4.11"
 once_cell = "1.5.2"
 opener = "0.5.0"
-reqwest = { version = "0.11.18", features = ["blocking", "json"] }
 rpassword = "5.0.1"
-semver = { version = "0.11.0", features = ["serde"] }
 serde_json = "1.0.58"
 structopt = "0.3.18"
 tempfile = "3.1.0"
 toml = "0.5.6"
 toml_edit = "0.2.0"
-url = { version = "2.1.1", features = ["serde"] }
 walkdir = "2.3.1"
 whoami = "1.1.2"
 zip = "0.5.11"
@@ -58,6 +50,12 @@ vendored-libgit2 = ["git2/vendored-libgit2"]
 
 [dev-dependencies]
 insta = { version = "1.1.0" }
+matter = { version = "0.1.0-alpha4" }
+base64 = { version = "0.21.0-rc.1" }
+reqwest = { version = "0.11.18", features = ["blocking", "json"] }
+semver = { version = "0.11.0", features = ["serde"] }
+url = { version = "2.1.1", features = ["serde"] }
+
 
 [lib]
 name = "libcityx"
