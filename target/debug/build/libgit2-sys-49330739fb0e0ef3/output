@@ -1,0 +1,385 @@
+cargo:rerun-if-env-changed=LIBGIT2_NO_PKG_CONFIG
+cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-pc-windows-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_pc_windows_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+cargo:rerun-if-env-changed=PKG_CONFIG
+cargo:rerun-if-env-changed=LIBGIT2_STATIC
+cargo:rerun-if-env-changed=LIBGIT2_DYNAMIC
+cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-pc-windows-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_pc_windows_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-pc-windows-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_pc_windows_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-pc-windows-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_pc_windows_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+cargo:rerun-if-env-changed=LIBGIT2_NO_PKG_CONFIG
+cargo:rerun-if-env-changed=PKG_CONFIG_x86_64-pc-windows-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_x86_64_pc_windows_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG
+cargo:rerun-if-env-changed=PKG_CONFIG
+cargo:rerun-if-env-changed=LIBGIT2_STATIC
+cargo:rerun-if-env-changed=LIBGIT2_DYNAMIC
+cargo:rerun-if-env-changed=PKG_CONFIG_ALL_STATIC
+cargo:rerun-if-env-changed=PKG_CONFIG_ALL_DYNAMIC
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64-pc-windows-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH_x86_64_pc_windows_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_PATH
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64-pc-windows-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR_x86_64_pc_windows_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=PKG_CONFIG_LIBDIR
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64-pc-windows-gnu
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR_x86_64_pc_windows_gnu
+cargo:rerun-if-env-changed=HOST_PKG_CONFIG_SYSROOT_DIR
+cargo:rerun-if-env-changed=PKG_CONFIG_SYSROOT_DIR
+cargo:rustc-cfg=libgit2_vendored
+libgit2/include\git2\annotated_commit.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\annotated_commit.h
+libgit2/include\git2\apply.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\apply.h
+libgit2/include\git2\attr.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\attr.h
+libgit2/include\git2\blame.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\blame.h
+libgit2/include\git2\blob.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\blob.h
+libgit2/include\git2\branch.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\branch.h
+libgit2/include\git2\buffer.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\buffer.h
+libgit2/include\git2\cert.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\cert.h
+libgit2/include\git2\checkout.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\checkout.h
+libgit2/include\git2\cherrypick.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\cherrypick.h
+libgit2/include\git2\clone.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\clone.h
+libgit2/include\git2\commit.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\commit.h
+libgit2/include\git2\common.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\common.h
+libgit2/include\git2\config.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\config.h
+libgit2/include\git2\credential.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\credential.h
+libgit2/include\git2\credential_helpers.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\credential_helpers.h
+libgit2/include\git2\cred_helpers.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\cred_helpers.h
+libgit2/include\git2\deprecated.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\deprecated.h
+libgit2/include\git2\describe.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\describe.h
+libgit2/include\git2\diff.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\diff.h
+libgit2/include\git2\email.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\email.h
+libgit2/include\git2\errors.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\errors.h
+libgit2/include\git2\filter.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\filter.h
+libgit2/include\git2\global.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\global.h
+libgit2/include\git2\graph.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\graph.h
+libgit2/include\git2\ignore.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\ignore.h
+libgit2/include\git2\index.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\index.h
+libgit2/include\git2\indexer.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\indexer.h
+libgit2/include\git2\mailmap.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\mailmap.h
+libgit2/include\git2\merge.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\merge.h
+libgit2/include\git2\message.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\message.h
+libgit2/include\git2\net.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\net.h
+libgit2/include\git2\notes.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\notes.h
+libgit2/include\git2\object.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\object.h
+libgit2/include\git2\odb.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\odb.h
+libgit2/include\git2\odb_backend.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\odb_backend.h
+libgit2/include\git2\oid.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\oid.h
+libgit2/include\git2\oidarray.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\oidarray.h
+libgit2/include\git2\pack.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\pack.h
+libgit2/include\git2\patch.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\patch.h
+libgit2/include\git2\pathspec.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\pathspec.h
+libgit2/include\git2\proxy.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\proxy.h
+libgit2/include\git2\rebase.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\rebase.h
+libgit2/include\git2\refdb.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\refdb.h
+libgit2/include\git2\reflog.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\reflog.h
+libgit2/include\git2\refs.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\refs.h
+libgit2/include\git2\refspec.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\refspec.h
+libgit2/include\git2\remote.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\remote.h
+libgit2/include\git2\repository.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\repository.h
+libgit2/include\git2\reset.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\reset.h
+libgit2/include\git2\revert.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\revert.h
+libgit2/include\git2\revparse.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\revparse.h
+libgit2/include\git2\revwalk.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\revwalk.h
+libgit2/include\git2\signature.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\signature.h
+libgit2/include\git2\stash.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\stash.h
+libgit2/include\git2\status.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\status.h
+libgit2/include\git2\stdint.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\stdint.h
+libgit2/include\git2\strarray.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\strarray.h
+libgit2/include\git2\submodule.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\submodule.h
+libgit2/include\git2\sys\alloc.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\alloc.h
+libgit2/include\git2\sys\commit.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\commit.h
+libgit2/include\git2\sys\commit_graph.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\commit_graph.h
+libgit2/include\git2\sys\config.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\config.h
+libgit2/include\git2\sys\cred.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\cred.h
+libgit2/include\git2\sys\credential.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\credential.h
+libgit2/include\git2\sys\diff.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\diff.h
+libgit2/include\git2\sys\email.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\email.h
+libgit2/include\git2\sys\filter.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\filter.h
+libgit2/include\git2\sys\hashsig.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\hashsig.h
+libgit2/include\git2\sys\index.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\index.h
+libgit2/include\git2\sys\mempack.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\mempack.h
+libgit2/include\git2\sys\merge.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\merge.h
+libgit2/include\git2\sys\midx.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\midx.h
+libgit2/include\git2\sys\odb_backend.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\odb_backend.h
+libgit2/include\git2\sys\openssl.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\openssl.h
+libgit2/include\git2\sys\path.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\path.h
+libgit2/include\git2\sys\refdb_backend.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\refdb_backend.h
+libgit2/include\git2\sys\reflog.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\reflog.h
+libgit2/include\git2\sys\refs.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\refs.h
+libgit2/include\git2\sys\remote.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\remote.h
+libgit2/include\git2\sys\repository.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\repository.h
+libgit2/include\git2\sys\stream.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\stream.h
+libgit2/include\git2\sys\transport.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\sys\transport.h
+libgit2/include\git2\tag.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\tag.h
+libgit2/include\git2\trace.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\trace.h
+libgit2/include\git2\transaction.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\transaction.h
+libgit2/include\git2\transport.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\transport.h
+libgit2/include\git2\tree.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\tree.h
+libgit2/include\git2\types.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\types.h
+libgit2/include\git2\version.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\version.h
+libgit2/include\git2\worktree.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2\worktree.h
+libgit2/include\git2.h => F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\include\git2.h
+TARGET = Some(x86_64-pc-windows-gnu)
+OPT_LEVEL = Some(0)
+HOST = Some(x86_64-pc-windows-gnu)
+cargo:rerun-if-env-changed=CC_x86_64-pc-windows-gnu
+CC_x86_64-pc-windows-gnu = None
+cargo:rerun-if-env-changed=CC_x86_64_pc_windows_gnu
+CC_x86_64_pc_windows_gnu = None
+cargo:rerun-if-env-changed=HOST_CC
+HOST_CC = None
+cargo:rerun-if-env-changed=CC
+CC = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some(true)
+CARGO_CFG_TARGET_FEATURE = Some(cmpxchg16b,fxsr,sse,sse2,sse3)
+cargo:rerun-if-env-changed=CFLAGS_x86_64-pc-windows-gnu
+CFLAGS_x86_64-pc-windows-gnu = None
+cargo:rerun-if-env-changed=CFLAGS_x86_64_pc_windows_gnu
+CFLAGS_x86_64_pc_windows_gnu = None
+cargo:rerun-if-env-changed=HOST_CFLAGS
+HOST_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+exit code: 0
+cargo:rerun-if-env-changed=AR_x86_64-pc-windows-gnu
+AR_x86_64-pc-windows-gnu = None
+cargo:rerun-if-env-changed=AR_x86_64_pc_windows_gnu
+AR_x86_64_pc_windows_gnu = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-pc-windows-gnu
+ARFLAGS_x86_64-pc-windows-gnu = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_pc_windows_gnu
+ARFLAGS_x86_64_pc_windows_gnu = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rustc-link-lib=static=git2
+cargo:rustc-link-search=native=F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out\build
+cargo:root=F:\GithubProjekty\cityx\target\debug\build\libgit2-sys-49330739fb0e0ef3\out
+cargo:rustc-link-lib=winhttp
+cargo:rustc-link-lib=rpcrt4
+cargo:rustc-link-lib=ole32
+cargo:rustc-link-lib=crypt32

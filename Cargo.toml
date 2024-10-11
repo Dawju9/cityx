@@ -8,7 +8,7 @@ authors = ["Spark Team <spark.team@gmail.com>"]
 
 [dependencies]  
 serde = "1.0"
-signal = "0.7.0"
+nix = "0.22.0"
 anyhow = "1.0.33"
 blake3 = "0.3.7"
 crossterm = "0.22.1"

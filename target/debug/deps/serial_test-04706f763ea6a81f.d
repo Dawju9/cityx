@@ -1,0 +1,11 @@
+F:\GithubProjekty\cityx\target\debug\deps\libserial_test-04706f763ea6a81f.rmeta: C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\lib.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\code_lock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\parallel_code_lock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\rwlock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\serial_code_lock.rs
+
+F:\GithubProjekty\cityx\target\debug\deps\libserial_test-04706f763ea6a81f.rlib: C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\lib.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\code_lock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\parallel_code_lock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\rwlock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\serial_code_lock.rs
+
+F:\GithubProjekty\cityx\target\debug\deps\serial_test-04706f763ea6a81f.d: C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\lib.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\code_lock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\parallel_code_lock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\rwlock.rs C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\serial_code_lock.rs
+
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\lib.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\code_lock.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\parallel_code_lock.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\rwlock.rs:
+C:\Users\dawju\.cargo\registry\src\index.crates.io-6f17d22bba15001f\serial_test-2.0.0\src\serial_code_lock.rs:
