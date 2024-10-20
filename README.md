@@ -1,4 +1,4 @@
-# CityX - Przygoda w Cybersferze 🌆
+# CityX - Przygoda w Cybersferze 🌆 Essa!
 
 [Odwiedź stronę CityX](https://dawju9.github.io/cityx/)
 
