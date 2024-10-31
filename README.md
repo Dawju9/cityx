@@ -68,9 +68,7 @@ Czy jesteś gotowy, aby zmierzyć się z wyzwaniami, które stawia przed Tobą *
 
 
 
-
-
-
+<br>
 
 
 
