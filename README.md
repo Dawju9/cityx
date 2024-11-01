@@ -1,97 +1,226 @@
-# CityX - Przygoda w Cybersferze 🌆 Essa!
+### Analiza i Koncepcja Opisu Projektu
 
-[Odwiedź stronę CityX](https://dawju9.github.io/cityx/)
+Stworzenie opisu projektu **CityX Framework** powinno uwzględniać techniczny charakter oraz istotne aspekty, które wyróżniają projekt. Chcemy osiągnąć estetykę mroczną, ale również informatyczną, zapewniającą wizualną spójność oraz jasność komunikacji. Przygotuję propozycję dla twojego opisu w formacie Markdown, z dodatkowymi elementami wizualnymi i strukturą podkreślającą zaawansowanie technologiczne oraz futurystyczną atmosferę projektu.
 
-## O projekcie
-**CityX** to innowacyjna gra stworzona w uniwersum Roblox, która umożliwia graczom odkrywanie tajemnic cybernetycznego świata, stawiając czoła różnorodnym wyzwaniom. Wciel się w bohatera, zbuduj swoje imperium i połącz siły z innymi graczami, aby pokonać przeciwników i odkryć niezwykłe sekrety!
+---
 
-## Informacje o autorze
-**Whitekali** - programista i projektant gier, pasjonujący się tworzeniem innowacyjnych rozwiązań w przestrzeni cyfrowej. Z zaangażowaniem rozwijam projekty, które łączą kreatywność z technologią i przynoszą radość graczom.
+# 🏙️ **CityX Framework** 🖤🖥️
 
-## Dokumentacja
+---
 
-### Funkcjonalności
-- **Proceduralne generowanie miast**: Każda rozgrywka jest unikalna, dzięki dynamicznie tworzonym miastom.
-- **Modularna architektura**: Elastyczność w dodawaniu nowych elementów i funkcji.
-- **Interaktywne wyzwania**: Stawiaj czoła różnorodnym przeciwnikom i rozwiąż zagadki, aby posunąć się naprzód.
+**### Projekt CityX Framework**
 
-### Technologie
-- **Programowanie**: Lua, Python
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, PHP
-- **Zarządzanie projektami**: Git, Docker
+> **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.**
 
-## Projekty aktualne
-- [CityX](https://dawju9.github.io/cityx/) - Główne repozytorium projektu.
-- [Ya-Whitekali](https://dawju9.github.io/Ya-Whitekali/) - Informacje o autorze.
+---
 
-## Wymagania
-- Zainstalowany [Roblox](https://roblox.com).
-- Zestaw SDK do skutecznego zarządzania projektem.
+## 📜 **Opis Projektu**
 
-## Faza produkcji
-> **UWAGA!** Tworzenie tego projektu to złożony proces! Wymaga to znajomości budowy studia Roblox oraz umiejętności w zakresie konfiguracji środowisk. Przed rozpoczęciem zapoznaj się z dokumentacją, aby w pełni wykorzystać potencjał projektu.
+CityX to innowacyjny framework łączący backend napisany w **Rust** z front-endem opartym na **Roblox Lua**. Celem projektu jest ułatwienie budowy złożonych, proceduralnych światów w grach Roblox, umożliwiając skalowalność oraz efektywne zarządzanie zasobami.
 
-## Wkład
-Chcesz pomóc? Każdy wkład jest mile widziany! Jeśli masz pomysły na ulepszenia lub chcesz dodać coś do projektu, sprawdź sekcję [Contributing](CONTRIBUTING.md).
+---
 
-## Jak zacząć?
-Aby rozpocząć pracę z **CityX**, postępuj zgodnie z poniższymi krokami:
+## 🏗️ **Struktura Projektu**
 
-1. **Zainstaluj Roblox**: Upewnij się, że masz zainstalowaną najnowszą wersję Roblox.
-2. **Zainstaluj SDK**: Skorzystaj z zestawu SDK, aby skonfigurować swoje środowisko deweloperskie.
-3. **Uruchom grę**: Po skonfigurowaniu środowiska, uruchom projekt i rozpocznij przygodę!
+- `/cityx-backend`: **Rust** – Obsługa krytycznych operacji serwerowych.
+- `/cityx-client`: **Roblox Lua** – Interakcje z użytkownikami i interfejsy.
+- `/cityx-core`: **Roblox Lua** – Główna logika gry, oparta na ECS.
+- `/cityx-server`: **Roblox Lua** – Logika serwera, synchronizacja.
+- `/cityx-renderer`: **Rust** – Wydajne renderowanie graficzne.
+- `/game`: Zasoby gry, skrypty oraz dane konfiguracyjne.
 
-## Kontakt
-W razie pytań lub sugestii, skontaktuj się z autorem:
-- **Email**: whitekali@example.com
+---
+
+## 🔍 **Kluczowe Funkcje**
+
+1. **Modularność i Skalowalność**: Framework umożliwia łatwe rozwijanie oraz integrację nowych modułów.
+2. **Integracja Rust & Roblox Lua**: Wydajna komunikacja między backendem a frontendem.
+3. **Zaawansowana Logika Gry**: Wykorzystanie wzorca ECS (Entity-Component-System).
+4. **Efektywne Zarządzanie Danymi**: Nowoczesna architektura zapewnia wydajność.
+
+---
+
+## 🛠️ **Instalacja i Konfiguracja**
+
+1. **Zainstaluj Roblox Studio**: [Roblox Studio](https://www.roblox.com/create)
+2. **Skonfiguruj Środowisko Rust**: Pobierz i zainstaluj Rust z [rust-lang.org](https://www.rust-lang.org)
+3. **Zarządzanie zależnościami**: Wykorzystaj **Wally** do instalacji bibliotek w Lua.
+4. **Uruchomienie**:
+   - Skorzystaj ze skryptu `roblox` lub `scripts/install_packages.sh`, aby skonfigurować środowisko.
+
+---
+
+## 🖥️ **Główne Komponenty**
+
+### Backend (Rust)
+- Obsługuje operacje serwerowe.
+- Zarządza żądaniami sieciowymi i synchronizacją danych.
+
+### Frontend (Roblox Lua)
+- Tworzy interakcje użytkownika oraz interfejs gry.
+
+### Core (Lua)
+- Odpowiada za główną logikę rozgrywki.
+
+### Renderer (Rust)
+- Wydajne renderowanie graficzne, zoptymalizowane pod kątem wydajności.
+
+---
+
+## 💡 **Wpływ na Informatyzację**
+
+- **Efektywność**: Nowoczesne podejście do tworzenia gier multiplayer.
+- **Innowacja**: Połączenie różnych technologii w jednym projekcie.
+- **Skalowalność**: Prosta rozbudowa o nowe funkcje i elementy.
+
+---
+
+## 🌐 **Potencjalne Zastosowania**
+
+1. **Gry Multiplayer**: Tworzenie złożonych i rozbudowanych światów.
+2. **Aplikacje Webowe**: Integracja zaawansowanej logiki serwerowej.
+3. **Narzędzia Edukacyjne**: Symulacje i aplikacje edukacyjne.
+
+---
+
+## 📝 **Uwagi**
+
+- Projekt wymaga doświadczenia w środowisku Roblox i Rust.
+- Dokumentacja obejmuje kluczowe aspekty, ale nie zawiera instrukcji tworzenia pełnych gier.
+- Kluczowe algorytmy oraz struktury są chronione przed wyciekiem.
+
+---
+
+## 🎮 **Rozpoczęcie Przygody w CityX**
+
+> **🌌 Zanurz się w cybernetycznym świecie pełnym tajemnic!**
+
+1. **Zainstaluj Roblox Studio**: [Roblox Studio](https://www.roblox.com/create)
+2. **Skonfiguruj Rust**: [Rust Installation](https://www.rust-lang.org/tools/install)
+3. **Uruchom i eksploruj**: Wejdź do CityX i odkryj nieznane!
+
+---
+
+## 👤 **Kontakt**
+
+- **Autor**: Whitekali
+- **E-mail**: whitekali@example.com
 - **GitHub**: [Dawju9](https://github.com/Dawju9)
 
-Czy uda ci się zdobyć szczyt **FinnalStair** i odkryć wszystkie jego tajemnice? Czy sprostasz wyzwaniom, jakie stawia przed tobą **Aiden**? Zanurz się w cybernetyczny chaos i przekonaj się sam!
+---
+
+## **Gotowy na Przygody?**
+
+Odkryj sekrety CityX, zmierz się z wyzwaniami i zostań mistrzem cybernetycznego imperium! 🏙️✨
 
 ---
 
-## Dodatkowe informacje
+Jeśli chcesz wprowadzić jakiekolwiek zmiany lub dodać coś do tego opisu, daj mi znać! 
 
-Projekt zawiera: 
-- brak informacji.
-
-### Faza produkcji
-
-> **UWAGA!** Tworzenie tego projektu to złożony proces! Zanim zaczniesz, zapoznaj się z dokumentacją, aby skutecznie wzbogacić projekt. Pamiętaj, że wiedza o budowie studia Roblox i konfiguracji środowiska jest kluczowa, aby uniknąć problemów.
-
-Przede wszystkim będziesz chciał zainstalować [Roblox](https://Roblox.com/). Zestaw SDK wymaga więcej wprawy, ale jest kluczowy dla skutecznego zarządzania projektem. Po zainstalowaniu zależności uruchom `roblox` lub wpisz `scripts/install_packages.sh`, aby naprawić reeksport z Wally. 
-
----
-
-Czy jesteś gotowy, aby zmierzyć się z wyzwaniami, które stawia przed Tobą **CityX**? Czas rozpocząć przygodę w świecie cybernetycznych tajemnic! 🚀
-
-
-
-<br>
+**TODOList**
+1. Przejrzyj strukturę plików w głównym katalogu gry.
+2. Dodaj skrypty generujące plik `rblx` dla proceduralnego świata.
+3. Stwórz i przetestuj skrypty do publikacji gry w Roblox.
+4. Wykonaj analizę i automatyzację przy pomocy GitHub Actions.
 
 
 
 
 
-Czy uda ci się zdobyć szczyt FinnalStair i odkryć wszystkie jego tajemnice? Czy sprostasz wyzwaniom, jakie stawia przed tobą Aiden? Zanurz się w cybernetyczny chaos i przekonaj się sam!
+<!-- Allow this file to not have a first line heading -->
+<!-- markdownlint-disable-file MD041 no-emphasis-as-heading -->
 
-Tutaj przedstawiłem pełną, gotową do produkcji implementację dobierania graczy PlayFab. Każdy może go dostosować
-ich potrzeb lub wnieść swój wkład.
+<!-- inline html -->
+<!-- markdownlint-disable-file MD033 -->
+
+<div align="center">
+
+<!--- FIXME: Pick an emoji and name your project! --->
+# `📦 Roblox Project Template`
+
+<!--- FIXME: Write short catchy description/tagline of project --->
+**A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
+
+<!--- FIXME: Update crate, repo and CI workflow names here! Remove any that are not relevant --->
+[![Build status](https://github.com/grilme99/roblox-project-template/workflows/CI/badge.svg)](https://github.com/grilme99/roblox-project-template/actions)
+
+</div>
+
+A guide for this template isn't written yet!
+# Konfiguracja podstawowych danych gry
+#Wczytaj konfigurację z citix.toml w kodzie Rust: 
+#Użyj biblioteki takiej jak toml_edit lub serde_toml,
+# aby wczytać konfigurację z citix.toml w swoim kodzie
+#  Rust (np. w pliku main.rs backendu).
+[game]
+# Konfiguracja specyficzna dla gry
+#Przykładowe opcje, które można dodać:
+name = "Miastox"
+max_players = 100
+genre = "Simulation"
+# Konfiguracja ustawień gry.
+
+# Ustawienia grafiki
+[graphics]
+resolution = "1920x1080" # Rozdzielczość ekranu
+fullscreen = true        # Tryb pełnoekranowy
+
+[game.settings]
+name = "MiastoX"  # Nazwa gry
+version = "0.0.1"  # Wersja gry
+genre = "Simulation"  # Gatunek gry
+max_players = 100  # Maksymalna liczba graczy w jednej sesji
+min_players = 1  # Minimalna liczba graczy potrzebna do rozpoczęcia rozgrywki
+difficulty = "custom"  # Domyślny poziom trudności ("easy", "normal", "hard", "custom")
+language = "en"  # Domyślny język gry
 
 
-Projekt zawiera:
--  brak informacji
--  
-# Faza produkcji
+# Konfiguracja serwera
+[server]
+address = "127.0.0.1"  # Adres IP serwera
+port = 8080            # Port serwera
 
-> **UWAGA!** Tworzenie tego projektu to trochę skomplikowany proces!
-> Zanim zaczniemy, wyjaśniać strukturę owego projektu będziesz potrzebować wiedzy i doświadczenia w konfiguracji środowisk oraz samej budowy studia Roblox. Zapoznam cię że z wynikającej niżej dokumentacji nie nauczysz się jak kolwiek budować owe gry a jedynie sprawnie urozmaicisz projekt mojej gry, wynika to z zabezpieczenia samej gry jak i jej patronów przed wyciekiem skomplikowanych algorytmów Aidena które pozwalają do dziś dzień przeciwdziałać zrujnowaniu Citix
-> bardzo dobrze!
-> 
-> Możesz też sprawdzić gotową wersję Frameworku [tutaj] (https://roblox.com). SOON on Cityx
+# ... inne sekcje konfiguracyjne
 
+[game.test_place]
+name = "CityX Test Place"
+place_id = 0  # Na początek, ID będzie 0, ale będzie aktualizowane przez skrypt Lua
+description = "This is the test place for CityX."
+max_players = 10  # Ustaw maksymalną liczbę graczy dla testowego miejsca
+is_public = false  # Ustawienie prywatności testowego miejsca
 
-Przede wszystkim będziesz chciał zainstalować [Roblox](https://Roblox.com/). Jeśli jesteś szalony, możesz także zainstalować ręcznie. Zestaw SDK wymaga wiecej wprawy! JK.
+[game.settings.graphics]
+resolution = "1920x1080"  # Rozdzielczość ekranu
+fullscreen = true  # Tryb pełnoekranowy
+vsync = true  # Synchronizacja pionowa
+quality = "high"  # Jakość grafiki ("low", "medium", "high", "ultra")
+anti_aliasing = true  # Włączone wygładzanie krawędzi
 
-Po zainstalowaniu zależności uruchom `roblox` *lub*, jeśli chcesz naprawić reeksport z Wally, wpisz `scripts/install_packages.sh`. Uruchomienie skryptu powłoki będzie wymagało zainstalowania [`wally-package-types`](https://github.com/JohnnyMorganz/wally-package-types). Po prostu użyj Aftmana lub Foremana, aby zarządzać tym za Ciebie! JK.
+[game.settings.audio]
+master_volume = 80  # Głośność ogólna (w skali 0-100)
+music_volume = 70  # Głośność muzyki (w skali 0-100)
+effects_volume = 75  # Głośność efektów dźwiękowych (w skali 0-100)
+voice_chat_enabled = true  # Włączenie komunikacji głosowej
+
+[game.settings.network]
+server_tickrate = 30  # Częstotliwość aktualizacji serwera (w FPS)
+region = "EU"  # Domyślny region serwera
+latency_threshold = 150  # Maksymalna akceptowalna latencja (ms)
+
+[game.settings.controls]
+mouse_sensitivity = 1.0  # Czułość myszy
+invert_y_axis = false  # Odwrócenie osi Y
+keybindings = {  # Przykładowe klawiszowe skróty
+    move_forward = "W",
+    move_backward = "S",
+    move_left = "A",
+    move_right = "D",
+    jump = "Space",
+    crouch = "Ctrl",
+    interact = "E"
+}
+
+[game.settings.customization]
+character_skin = "default"  # Domyślny skin postaci
+unlocked_skins = ["default", "warrior", "cyberpunk"]  # Odkryte skiny
+custom_banner_color = "#FF0000"  # Kolor banera gracza
