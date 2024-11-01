@@ -1,13 +1,29 @@
-### Analiza i Koncepcja Opisu Projektu
-
-Stworzenie opisu projektu **CityX Framework** powinno uwzględniać techniczny charakter oraz istotne aspekty, które wyróżniają projekt. Chcemy osiągnąć estetykę mroczną, ale również informatyczną, zapewniającą wizualną spójność oraz jasność komunikacji. Przygotuję propozycję dla twojego opisu w formacie Markdown, z dodatkowymi elementami wizualnymi i strukturą podkreślającą zaawansowanie technologiczne oraz futurystyczną atmosferę projektu.
-
 ---
 
 # 🏙️ **CityX Framework** 🖤🖥️
 
 ---
 
+
+
+<!-- Allow this file to not have a first line heading -->
+<!-- markdownlint-disable-file MD041 no-emphasis-as-heading -->
+
+<!-- inline html -->
+<!-- markdownlint-disable-file MD033 -->
+
+<div align="center">
+
+<!--- FIXME: Pick an emoji and name your project! --->
+# `📦 Roblox Project Template`
+
+<!--- FIXME: Write short catchy description/tagline of project --->
+**A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
+
+<!--- FIXME: Update crate, repo and CI workflow names here! Remove any that are not relevant --->
+[![Build status](https://github.com/grilme99/roblox-project-template/workflows/CI/badge.svg)](https://github.com/grilme99/roblox-project-template/actions)
+
+</div>
 **### Projekt CityX Framework**
 
 > **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.**
@@ -125,26 +141,6 @@ Jeśli chcesz wprowadzić jakiekolwiek zmiany lub dodać coś do tego opisu, daj
 
 
 
-
-
-<!-- Allow this file to not have a first line heading -->
-<!-- markdownlint-disable-file MD041 no-emphasis-as-heading -->
-
-<!-- inline html -->
-<!-- markdownlint-disable-file MD033 -->
-
-<div align="center">
-
-<!--- FIXME: Pick an emoji and name your project! --->
-# `📦 Roblox Project Template`
-
-<!--- FIXME: Write short catchy description/tagline of project --->
-**A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
-
-<!--- FIXME: Update crate, repo and CI workflow names here! Remove any that are not relevant --->
-[![Build status](https://github.com/grilme99/roblox-project-template/workflows/CI/badge.svg)](https://github.com/grilme99/roblox-project-template/actions)
-
-</div>
 
 A guide for this template isn't written yet!
 # Konfiguracja podstawowych danych gry
