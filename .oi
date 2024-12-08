@@ -1,0 +1,195 @@
+Struktura folderów w repozytorium MiastoX
+graphql
+Skopiuj kod
+MiastoX/
+??? README.md                  # Podstawowe informacje o projekcie
+??? .gitignore                 # Wykluczenia plików z repozytorium
+??? LICENSE                    # Licencja projektu
+??? src/                       # G³ówne Ÿród³a gry
+?   ??? core/                  # Kluczowe skrypty zarz¹dzaj¹ce gr¹
+?   ?   ??? Init.lua           # Inicjalizacja gry
+?   ?   ??? TeleportManager.lua # Zarz¹dzanie teleportami
+?   ?   ??? PerformanceMonitor.lua # Monitorowanie wydajnoœci
+?   ??? maps/                  # Mapy gry
+?   ?   ??? procedural/        # Generatory map proceduralnych
+?   ?   ?   ??? MapGenerator.lua
+?   ?   ?   ??? TerrainBuilder.lua
+?   ?   ??? locations/         # Sta³e lokacje
+?   ?   ?   ??? LocationManager.lua
+?   ?   ?   ??? SpawnPoints.lua
+?   ?   ?   ??? Landmarks.lua
+?   ??? devtools/              # Narzêdzia dla programistów
+?   ?   ??? DebugPanel.lua     # Panel debugowania
+?   ?   ??? WorldEditor.lua    # Edytor œwiata
+?   ??? scripts/               # Skrypty zwi¹zane z logik¹ gry
+?   ?   ??? GridManager.lua    # Zarz¹dzanie gridami œwiata
+?   ?   ??? DreamManager.lua   # Zarz¹dzanie elementami "Dreams"
+?   ?   ??? AIController.lua   # Zarz¹dzanie AI przeciwników
+?   ??? ui/                    # Interfejs u¿ytkownika
+?       ??? HUD.lua            # G³ówny interfejs HUD
+?       ??? Menu.lua           # Menu gry
+?       ??? Settings.lua       # Ustawienia gry
+??? workspace/                 # Struktura œwiata gry
+?   ??? World/                 # G³ówne elementy œwiata
+?   ?   ??? Terrain/           # Teren gry
+?   ?   ??? Obstacles/         # Przeszkody
+?   ?   ??? Stairs/            # Proceduralnie generowane schody
+?   ?   ??? Dreams/            # Dynamiczne elementy gry
+?   ??? Lighting/              # Elementy œwietlne i dynamiczne modele
+?   ?   ??? Effects/           # Efekty œwietlne
+?   ?   ??? Models/            # Modele dynamiczne
+?   ?   ??? DreamElements/     # Elementy proceduralne
+?   ??? Players/               # Elementy graczy
+?       ??? SpawnPoints/       # Punkty startowe
+?       ??? Characters/        # Modele postaci
+?       ??? UI/                # HUD gracza
+??? tools/                     # Narzêdzia wspieraj¹ce automatyzacjê
+?   ??? MapSerializer.lua      # Serializacja i deserializacja map
+?   ??? AssetOptimizer.lua     # Optymalizacja obiektów gry
+?   ??? ReportGenerator.lua    # Generowanie raportów z sesji
+??? tests/                     # Testy jednostkowe
+    ??? PerformanceTests.lua   # Testy wydajnoœciowe
+    ??? GameplayTests.lua      # Testy mechaniki gry
+    ??? AITests.lua            # Testy AI
+
+    
+    
+    -- Main Script
+
+-- Services
+local RS = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+-- Constants
+local DISPLAY_DISTANCE_THRESHOLD = 5  -- Odleg³oœæ w metrach, przy której wyœwietlane s¹ informacje
+local DEVELOPER_MODE = true  -- Tryb deweloperski do debugowania
+
+-- Modules
+local Modules = RunService:WaitForChild("Modules")
+local PlayerInfoModule = require(Modules:WaitForChild("PlayerInfoModule"))
+
+-- Update interval
+local updateInterval = 0.5
+
+while wait(updateInterval) do
+    PlayerInfoModule.UpdatePlayerInfo()
+end
+
+-- ReplicatedStorage
+ReplicatedStorage.Events.Sync:FireClient(Players.LocalPlayer, {})
+
+-- PlayerInfoModule
+-- (Create a new module in ServerScriptService/Modules/PlayerInfoModule.lua)
+
+-- PlayerInfoModule.lua
+local PlayerInfoModule = {}
+
+-- GUI Setup (assuming the BillboardGui model for player information)
+local playerInfoGuiModel = game.ServerStorage.PlayerInfoBillboardModel -- Przyk³adowy model BillboardGui informacji o graczu
+local playerInfoGuiFolder = Instance.new("Folder")
+playerInfoGuiFolder.Name = "PlayerInfoGUI"
+playerInfoGuiFolder.Parent = game.Workspace
+
+-- Function to update player information display
+local function updatePlayerInformationDisplay(player)
+    -- Check if player's model exists
+    local character = player.Character
+    if not character then return end
+
+    -- Check distance between local player and the target player
+    local localPlayer = Players.LocalPlayer
+    local localCharacter = localPlayer.Character
+    if not localCharacter then return end
+
+    local playerPosition = character.PrimaryPart.Position
+    local localPlayerPosition = localCharacter.PrimaryPart.Position
+    local distance = (playerPosition - localPlayerPosition).magnitude
+
+    -- Determine if to display or hide player information
+    local displayInfo = distance <= DISPLAY_DISTANCE_THRESHOLD
+
+    if displayInfo then
+        -- Create or update player information BillboardGui
+        local playerInfoGui = playerInfoGuiFolder:FindFirstChild(player.Name)
+
+        if not playerInfoGui then
+            playerInfoGui = playerInfoGuiModel:Clone()
+            playerInfoGui.Name = player.Name
+            playerInfoGui.Parent = playerInfoGuiFolder
+        end
+
+        -- Calculate position and rotation for the BillboardGui
+        local playerHeadPosition = character:WaitForChild("Head").Position
+        local playerHeadScreenPosition, onScreen = workspace.CurrentCamera:WorldToScreenPoint(playerHeadPosition)
+
+        if onScreen then
+            playerInfoGui.Adornee = character.Head
+            playerInfoGui.StudsOffset = Vector3.new(0, 2, 0)  -- Przesuniêcie billboardu w górê od g³owy gracza
+            playerInfoGui.AlwaysOnTop = true
+            playerInfoGui.Size = UDim2.new(0, 200, 0, 50)  -- Rozmiar billboardu
+
+            -- Ustawienie pozycji i obrotu
+            playerInfoGui.CFrame = CFrame.new(playerHeadPosition + Vector3.new(0, 2, 0))
+            playerInfoGui.FaceCamera = true
+        else
+            playerInfoGui.Enabled = false
+        end
+    else
+        -- Hide player information BillboardGui if exists
+        local playerInfoGui = playerInfoGuiFolder:FindFirstChild(player.Name)
+        if playerInfoGui then
+            playerInfoGui:Destroy()
+        end
+    end
+end
+
+-- Function to handle player clicking for information display toggle
+local function handlePlayerClick(player)
+    -- Toggle visibility of player information GUI
+    local playerInfoGui = playerInfoGuiFolder:FindFirstChild(player.Name)
+
+    if playerInfoGui then
+        playerInfoGui.Enabled = not playerInfoGui.Enabled
+    end
+end
+
+-- Listen for player distance changes to update display
+RunService.Heartbeat:Connect(function()
+    if DEVELOPER_MODE then return end  -- Wyjœcie, jeœli w trybie deweloperskim
+
+    for _, player in ipairs(Players:GetPlayers()) do
+        updatePlayerInformationDisplay(player)
+    end
+end)
+
+-- Listen for player added and removed events
+Players.PlayerAdded:Connect(function(player)
+    updatePlayerInformationDisplay(player)
+
+    -- Listen for player click events
+    player.CharacterAdded:Connect(function(character)
+        character.PrimaryPart.Touched:Connect(function(hit)
+            if hit.Parent:FindFirstChild("Humanoid") then
+                handlePlayerClick(player)
+            end
+        end)
+    end)
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+    -- Cleanup GUI when player leaves
+    local playerInfoGui = playerInfoGuiFolder:FindFirstChild(player.Name)
+    if playerInfoGui then
+        playerInfoGui:Destroy()
+    end
+end)
+
+-- Update player info function
+function PlayerInfoModule.UpdatePlayerInfo()
+    for _, player in ipairs(Players:GetPlayers()) do
+        updatePlayerInformationDisplay(player)
+    end
+end
+
+return PlayerInfoModule
