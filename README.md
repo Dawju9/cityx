@@ -3,7 +3,7 @@
 **### Projekt CityX Framework**
 
 > **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.**
-## 🔍 **Kluczowe Funkcje**
+## 🔍 **Kluczowe Funkcje** 
 1. **Modularność i Skalowalność**: Framework umożliwia łatwe rozwijanie oraz integrację nowych modułów.
 2. **Integracja Rust & Roblox Lua**: Wydajna komunikacja między backendem a frontendem.
 3. **Zaawansowana Logika Gry**: Wykorzystanie wzorca ECS (Entity-Component-System).
