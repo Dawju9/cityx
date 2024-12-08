@@ -3,34 +3,66 @@ name: CI
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
-
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - uses: ok-nick/setup-aftman@v0.3.0
-      name: Install aftman
-      with:
-          token: ${{ SECRETS.GITHUB_TOKEN }}
+      - uses: ok-nick/setup-aftman@v0.3.0
+        name: Install aftman
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Lint
-      run: |
-        selene ./src
+      - name: Lint
+        run: |
+          selene ./src
 
   style:
     name: Styling
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: StyLua
-      uses: JohnnyMorganz/stylua-action@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        version: latest
-        args: --check ./src
+      - uses: actions/checkout@v3
+      
+      - name: StyLua
+        uses: JohnnyMorganz/stylua-action@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: --check ./src
+
+  install:
+    name: Install Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout code
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Install Wally from the GitHub repository
+      - name: Install Wally
+        run: |
+          # Install necessary dependencies
+          sudo apt-get update
+          sudo apt-get install -y build-essential curl git
+
+          # Clone Wally repository and build it
+          git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/roblox/wally.git
+          cd wally
+          make install
+
+          # Add Wally to the system path (optional)
+          sudo ln -s $(pwd)/bin/wally /usr/local/bin/wally
+
+      # Install Rojo
+      - name: Install Rojo
+        run: |
+          wget https://github.com/rojo-rbx/rojo/releases/download/v7.0.0/rojo-linux-x64.tar.gz -O rojo.tar.gz
+          tar -xvzf rojo.tar.gz
+          sudo mv rojo /usr/local/bin/
+          sudo chmod +x /usr/local/bin/rojo
+          rm rojo.tar.gz
