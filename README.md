@@ -2,7 +2,7 @@
  JW
 **### Projekt CityX Framework**
 
-> **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.**
+> **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.** ``` new generator ```
 ## 🔍 **Kluczowe Funkcje** 
 1. **Modularność i Skalowalność**: Framework umożliwia łatwe rozwijanie oraz integrację nowych modułów.
 2. **Integracja Rust & Roblox Lua**: Wydajna komunikacja między backendem a frontendem.
@@ -38,7 +38,7 @@ Odkryj sekrety CityX, zmierz się z wyzwaniami i zostań mistrzem cybernetyczneg
 - Zarządza żądaniami sieciowymi i synchronizacją danych.
 
 ### Renderer (Rust)
-- Wydajne renderowanie graficzne, zoptymalizowane pod kątem wydajności.
+- Wydajne renderowanie ``` new player movment ``` graficzne, zoptymalizowane pod kątem wydajności.
 
 ---
 <div align="center">
