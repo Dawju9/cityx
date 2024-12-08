@@ -1,45 +1,49 @@
-<!-- Allow this file to not have a first line heading -->
-<!-- markdownlint-disable-file MD041 no-emphasis-as-heading -->
-
-<!-- inline html -->
-<!-- markdownlint-disable-file MD033 -->
 # `📦 Roblox Project CityxN`
----
-<div align="center">
-# 🏙️ run's **CityX Framework** 🖤🖥️
-</div>
----
 
 **### Projekt CityX Framework**
 
 > **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.**
-
----
-
 ## 🔍 **Kluczowe Funkcje**
-
 1. **Modularność i Skalowalność**: Framework umożliwia łatwe rozwijanie oraz integrację nowych modułów.
 2. **Integracja Rust & Roblox Lua**: Wydajna komunikacja między backendem a frontendem.
 3. **Zaawansowana Logika Gry**: Wykorzystanie wzorca ECS (Entity-Component-System).
 4. **Efektywne Zarządzanie Danymi**: Nowoczesna architektura zapewnia wydajność.
 
----
-
 ## 🖥️ **Główne Komponenty**
+
+### Core (Lua)
+- Odpowiada za główną logikę rozgrywki.
+
+## **Gotowy na Przygody?**
+
+## 🎮 **Rozpoczęcie Przygody w CityX**
+
+> **🌌 Zanurz się w cybernetycznym świecie pełnym tajemnic!**
+ **Zainstaluj Roblox**: [Roblox](https://www.roblox.com/)
+**Uruchom i eksploruj**: Wejdź do CityX i odkryj nieznane!
+
+Odkryj sekrety CityX, zmierz się z wyzwaniami i zostań mistrzem cybernetycznego imperium! 🏙️✨
+
+
+ FIXME: Write short catchy description/tagline of project **A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
+
+<!------
+ FIXME: Write short catchy description/tagline of project **A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
+--->
+### Frontend (Roblox Lua)
+- Tworzy interakcje użytkownika oraz interfejs gry.
 
 ### Backend (Rust)
 - Obsługuje operacje serwerowe.
 - Zarządza żądaniami sieciowymi i synchronizacją danych.
 
-### Frontend (Roblox Lua)
-- Tworzy interakcje użytkownika oraz interfejs gry.
-
-### Core (Lua)
-- Odpowiada za główną logikę rozgrywki.
-
 ### Renderer (Rust)
 - Wydajne renderowanie graficzne, zoptymalizowane pod kątem wydajności.
 
+---
+<div align="center">
+# 🏙️ run's **CityX Framework** 🖤🖥️
+</div>
 ---
 
 ## 🏗️ **Struktura Projektu**
@@ -92,15 +96,8 @@ CityX to innowacyjny framework łączący backend napisany w **Rust** z front-en
 - Kluczowe algorytmy oraz struktury są chronione przed wyciekiem.
 
 ---
-
-## 🎮 **Rozpoczęcie Przygody w CityX**
-
-> **🌌 Zanurz się w cybernetycznym świecie pełnym tajemnic!**
-
-1. **Zainstaluj Roblox Studio**: [Roblox Studio](https://www.roblox.com/create)
-2. **Skonfiguruj Rust**: [Rust Installation](https://www.rust-lang.org/tools/install)
-3. **Uruchom i eksploruj**: Wejdź do CityX i odkryj nieznane!
-
+<br>
+ <br>
 ---
 
 ## 👤 **Kontakt**
@@ -109,15 +106,14 @@ CityX to innowacyjny framework łączący backend napisany w **Rust** z front-en
 - **E-mail**: whitekali@example.com
 - **GitHub**: [Whitekali](https://github.com/Dawju9)
 
----
+<!-- Allow this file to not have a first line heading -->
+<!-- markdownlint-disable-file MD041 no-emphasis-as-heading -->
 
-## **Gotowy na Przygody?**
+<!-- inline html -->
+<!-- markdownlint-disable-file MD033 -->
 
-Odkryj sekrety CityX, zmierz się z wyzwaniami i zostań mistrzem cybernetycznego imperium! 🏙️✨
-
-
-<!------
- FIXME: Write short catchy description/tagline of project **A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**--->
+<!--- 
+-2. **Skonfiguruj Rust**: [Rust Installation](https://www.rust-lang.org/tools/install)
 
 
-<!--- FIXME: Update crate, repo and CI workflow names here! Remove any that are not relevant [![Build status](https://github.com/grilme99/roblox-project-template/workflows/CI/badge.svg)](https://github.com/grilme99/roblox-project-template/actions)--->
+FIXME: Update crate, repo and CI workflow names here! Remove any that are not relevant [![Build status](https://github.com/grilme99/roblox-project-template/workflows/CI/badge.svg)](https://github.com/grilme99/roblox-project-template/actions)--->
