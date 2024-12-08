@@ -1,7 +1,0 @@
-            - name: Setup Node.js environment
-uses: actions/setup-node@v4.1.0
-with:  
-  always-auth: true
-uses: Roblox/setup-foreman@v1
-with:
- token: ${{ secrets.GITHUB_TOKEN }}
