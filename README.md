@@ -1,11 +1,53 @@
-Odkryj sekrety CityX, zmierz się z wyzwaniami i zostań mistrzem cybernetycznego imperium! 🏙️✨
-
-
- FIXME: Write short catchy description/tagline of project **A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
 
 <!------
+# `📦 Roblox Project CityxN` !!~ New UPDATE ~!!
+ JW
+**### Projekt CityX Framework**
+
+> **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.** ``` new generator ```
+
+---
+---
+
  FIXME: Write short catchy description/tagline of project **A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
 --->
+# `📦 Projekt CityxN Framework` !!~ New UPDATE ~!!
+ JW
+**### Projekt CityX Framework**
+**Odkryj sekrety CityX, zmierz się z wyzwaniami i zostań mistrzem cybernetycznego imperium! 🏙️✨**
+
+<div align="center">
+# 🏙️ run's **CityX Framework** 🖤🖥️
+</div>
+> **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.** ``` new generator ```
+>  ## 📜 **Opis Projektu**
+    CityX to innowacyjny framework łączący backend napisany w **Rust** z front-endem opartym na **Roblox Lua**. Celem projektu jest ułatwienie budowy złożonych, proceduralnych światów w grach Roblox, umożliwiając skalowalność oraz efektywne zarządzanie zasobami.
+
+
+## 🔍 **Kluczowe Funkcje** 
+1. **Modularność i Skalowalność**: Framework umożliwia łatwe rozwijanie oraz integrację nowych modułów.
+2. **Integracja Rust & Roblox Lua**: Wydajna komunikacja między backendem a frontendem.
+3. **Zaawansowana Logika Gry**: Wykorzystanie wzorca ECS (Entity-Component-System).
+4. **Efektywne Zarządzanie Danymi**: Nowoczesna architektura zapewnia wydajność.
+
+## 🖥️ **Główne Komponenty**
+
+### Core (Lua)
+- Odpowiada za główną logikę rozgrywki.
+
+## **Gotowy na Przygody?**
+
+## 🎮 **Rozpoczęcie Przygody w CityX**
+
+> **🌌 Zanurz się w cybernetycznym świecie pełnym tajemnic!**
+ **Zainstaluj Roblox**: [Roblox](https://www.roblox.com/)
+**Uruchom i eksploruj**: Wejdź do CityX i odkryj nieznane!
+
+
+
+<!----
+ FIXME: Write short catchy description/tagline of project **A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
+
 ### Frontend (Roblox Lua)
 - Tworzy interakcje użytkownika oraz interfejs gry.
 
@@ -16,11 +58,6 @@ Odkryj sekrety CityX, zmierz się z wyzwaniami i zostań mistrzem cybernetyczneg
 ### Renderer (Rust)
 - Wydajne renderowanie ``` new player movment ``` graficzne, zoptymalizowane pod kątem wydajności.
 
----
-<div align="center">
-# 🏙️ run's **CityX Framework** 🖤🖥️
-</div>
----
 
 ## 📜 **Opis Projektu**
 
@@ -33,7 +70,7 @@ CityX to innowacyjny framework łączący backend napisany w **Rust** z front-en
 - `/cityx-client`: **Roblox Lua** – Interakcje z użytkownikami i interfejsy.
 - `/cityx-core`: **Roblox Lua** – Główna logika gry, oparta na ECS.
 - `/cityx-server`: **Roblox Lua** – Logika serwera, synchronizacja.
-- `/cityx-renderer`: **Rust** – Wydajne renderowanie graficzne.--->
+- `/cityx-renderer`: **Rust** – Wydajne renderowanie graficzne.
 - `/game`: Zasoby gry, skrypty oraz dane konfiguracyjne.
 
 
@@ -44,7 +81,7 @@ CityX to innowacyjny framework łączący backend napisany w **Rust** z front-en
 3. **Zarządzanie zależnościami**: Wykorzystaj **Wally** do instalacji bibliotek w Lua.
 4. **Uruchomienie**:
    - Skorzystaj ze skryptu `roblox` lub `scripts/install_packages.sh`, aby skonfigurować środowisko.
-
+--->
 ## 💡 **Wpływ na Informatyzację**
 
 - **Efektywność**: Nowoczesne podejście do tworzenia gier multiplayer.
