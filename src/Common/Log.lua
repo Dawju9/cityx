@@ -1,7 +1,7 @@
 local __DEV__ = _G.__DEV__ == "true"
 
 local Log = {}
-
+--new
 local function createLogFunction(levelName: string, logFn: (...string) -> (), printInDev: boolean)
 	return function(...: any)
 		if printInDev and not __DEV__ then
