@@ -36,12 +36,7 @@ jobs:
 
       # Step 3: Install Rojo
       - name: Install Rojo
-        run: |
-          curl -sSL https://github.com/rojo-rbx/rojo/releases/download/v7.0.0/rojo-linux-x64.tar.gz -o rojo.tar.gz
-          tar -xvzf rojo.tar.gz
-          sudo mv rojo /usr/local/bin/
-          sudo chmod +x /usr/local/bin/rojo
-          rm rojo.tar.gz
+        run: wally install rojo
 
       # Step 4: Install Roblox dependencies using Wally
       - name: Install Roblox dependencies with Wally
