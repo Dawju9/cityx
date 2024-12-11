@@ -15,8 +15,6 @@ jobs:
 
       - uses: ok-nick/setup-aftman@v0.3.0
         name: Install aftman
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint
         run: |
@@ -31,7 +29,6 @@ jobs:
       - name: StyLua
         uses: JohnnyMorganz/stylua-action@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
           args: --check ./src
 
@@ -42,6 +39,7 @@ jobs:
       # Checkout code
       - name: Checkout Repository
         uses: actions/checkout@v3
+
 
       # Step 2: Install Wally using Homebrew (for dependency management)
       - name: Install Wally
