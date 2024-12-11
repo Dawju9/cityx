@@ -39,24 +39,6 @@ jobs:
       # Checkout code
       - name: Checkout Repository
         uses: actions/checkout@v3
+      - name: twiking rojo
+        run: aftman add rojo
 
-
-      # Step 2: Install Wally using Homebrew (for dependency management)
-      - name: Install Wally
-        run: |
-          # Install Homebrew
-          sudo apt-get update
-          sudo apt-get install -y build-essential curl file git
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-          
-          # Add Homebrew to PATH
-          echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >>~/.profile
-          eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
-          # Install Wally using Homebrew
-          brew install wally
-
-
-      # Step 3: Install Rojo
-      - name: Install Rojo
-        run: wally install rojo
