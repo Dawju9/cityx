@@ -1,3 +1,98 @@
+# A New UPDATE ~! Mission File
+# `📦 Projekt CityxN Framework`
+# -I created and was running this mission file on our community server.
+
+**Introduction of product**
+------------------
+
+**Features**
+------------------
+```
+
+> **Mroczny świat cybernetycznych wyzwań — modularyzacja na wyższym poziomie.** 
+>>## 📜 **Opis Projektu**
+>>## 🔍 **Kluczowe Funkcje** 
+>>## 🖥️ **Główne Komponenty**
+>>## 🏗️ **Struktura Projektu**
+>>## 🌐 **Potencjalne Zastosowania**
+>>## 💡 **Wpływ na Informatyzację**
+>>## 📝 **Uwagi**
+>  **shipwrecks loot crates, helicrashes, shield crates**
+```
+**Credits**
+------------------
+I just created a mission file with on internet avalible scripts. I do not own nothing here. So if some owner want's something to be removed, Contact me.
+
+## 👤 **Kontakt**
+
+- **Autor**: Whitekali
+- **E-mail**: whitekali@example.com
+- **GitHub**: [Whitekali](https://github.com/Dawju9)
+
+
+
+
+
+<!------
+Quad spawn/pack
+Jet-Ski spawn/pack
+Flag Hacking
+Safe Hacking
+Lock grinding
+XM8 Apps
+DMS Missions
+ZCP Missions
+DLC Bypass
+Supply Drops
+LoadOuts at SZ on Locker You can save them and Buy
+Virtual Garage
+BlackMarket
+No admin abuse
+20K Start money
+4 Secure Safezones
+Respect Based random Spawn LoadOuts
+BaseSpawn
+MarXet
+Revive
+Halo Drop
+Exile Manager, XM8 Discord Notifications
+Extra quiet earplugs
+Vector building
+Claim Vehicles
+Wage every 30min 750poptabs
+No Thermal
+Low Level Base protection
+Abandon Territory On Flag
+3H Restart Scheduled
+R3F Logistics
+--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!------
 # `📦 Roblox Project CityxN` !!~ New UPDATE ~!!
@@ -10,7 +105,7 @@
 ---
 
  FIXME: Write short catchy description/tagline of project **A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
---->
+
 # `📦 Projekt CityxN Framework` !!~ New UPDATE ~!!
  JW
 **### Projekt CityX Framework**
@@ -45,7 +140,6 @@
 
 
 
-<!----
  FIXME: Write short catchy description/tagline of project **A comprehensive starting point for Roblox projects. Implements Rojo, Darklua, Wally, and more.**
 
 ### Frontend (Roblox Lua)
@@ -65,7 +159,6 @@ CityX to innowacyjny framework łączący backend napisany w **Rust** z front-en
 
 ## 🏗️ **Struktura Projektu**
 
-<!--- 
 - `/cityx-backend`: **Rust** – Obsługa krytycznych operacji serwerowych.
 - `/cityx-client`: **Roblox Lua** – Interakcje z użytkownikami i interfejsy.
 - `/cityx-core`: **Roblox Lua** – Główna logika gry, oparta na ECS.
@@ -81,7 +174,7 @@ CityX to innowacyjny framework łączący backend napisany w **Rust** z front-en
 3. **Zarządzanie zależnościami**: Wykorzystaj **Wally** do instalacji bibliotek w Lua.
 4. **Uruchomienie**:
    - Skorzystaj ze skryptu `roblox` lub `scripts/install_packages.sh`, aby skonfigurować środowisko.
---->
+
 ## 💡 **Wpływ na Informatyzację**
 
 - **Efektywność**: Nowoczesne podejście do tworzenia gier multiplayer.
