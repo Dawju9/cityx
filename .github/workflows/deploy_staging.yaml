@@ -5,7 +5,7 @@ on:
     tags:
       - 'v*.*.*'  # Trigger for version tags, like v1.0.0
     branches:
-      - master
+      - mastvber
 
 jobs:
   build-deploy:
